@@ -1,10 +1,46 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sun, Zap, Wind, Leaf } from "lucide-react";
+import { ArrowRight, Sun, Zap, Wind, Leaf, MapPin, Phone } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      {/* Top Contact Bar */}
+      <div className="bg-white py-2 px-4 border-b">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="flex items-center gap-2 text-gray-600">
+            <MapPin className="h-4 w-4" />
+            <span className="text-sm">Ekkattuthangal, Guindy Chennai - 600 032</span>
+          </div>
+          <div className="flex items-center gap-2 text-gray-600">
+            <Phone className="h-4 w-4" />
+            <span className="text-sm">+91 9841210943 / +91 9884410943</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="bg-white py-4 px-4 shadow-sm">
+        <div className="container mx-auto flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <Wind className="h-8 w-8 text-green-600" />
+            <span className="text-xl font-bold">Empe Green Energy P Ltd</span>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex items-center gap-8">
+            <a href="#" className="text-gray-800 hover:text-green-600">Home</a>
+            <a href="#" className="text-gray-800 hover:text-green-600">About Us</a>
+            <a href="#" className="text-gray-800 hover:text-green-600">Services</a>
+            <a href="#" className="text-gray-800 hover:text-green-600">Products</a>
+            <a href="#" className="text-gray-800 hover:text-green-600">Gallery</a>
+            <a href="#" className="text-gray-800 hover:text-green-600">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Rest of the existing content */}
       {/* Hero Section */}
       <section className="relative h-screen flex items-center bg-gradient-to-r from-green-900 to-green-700 px-4">
         <div className="container mx-auto">
