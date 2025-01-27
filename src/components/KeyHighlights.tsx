@@ -30,7 +30,7 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
   }, [end, duration]);
 
   return (
-    <span className="text-5xl font-bold text-primary">
+    <span className="text-5xl font-bold text-[rgb(74,171,61)]">
       {prefix}{count}{suffix}
     </span>
   );
@@ -123,24 +123,24 @@ const KeyHighlights = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-br from-[rgb(74,171,61)]/5 to-secondary/5 p-8 rounded-lg shadow-lg">
+        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-8 text-center">Achievements and Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {isVisible && (
               <>
-                <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-md transition-all duration-300">
                   <div className="mb-4">
                     <Counter end={5} suffix="+ MW" duration={3000} />
                   </div>
                   <p className="text-gray-600">Small wind systems installed across India</p>
                 </div>
-                <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-md transition-all duration-300">
                   <div className="mb-4">
                     <Counter end={15} suffix="+ yrs" duration={3000} />
                   </div>
                   <p className="text-gray-600">of experience</p>
                 </div>
-                <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-md transition-all duration-300">
                   <div className="mb-4">
                     <Counter end={100} suffix="%" duration={3000} />
                   </div>

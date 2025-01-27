@@ -37,7 +37,7 @@ const Products = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -47,19 +47,19 @@ const Products = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-grow flex flex-col">
                 <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6 flex-grow">
                   {category.products.map((product, idx) => (
                     <li key={idx} className="text-gray-600 flex items-center">
-                      <CheckCircle2 className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[rgb(74,171,61)] mr-2 flex-shrink-0" />
                       {product}
                     </li>
                   ))}
                 </ul>
                 <a
                   href="#"
-                  className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full inline-flex items-center group transition-all duration-300 justify-center w-full"
+                  className="bg-[rgb(74,171,61)] hover:bg-[rgb(60,150,50)] text-white px-6 py-3 rounded-full inline-flex items-center group transition-all duration-300 justify-center"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
