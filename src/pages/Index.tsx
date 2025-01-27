@@ -109,13 +109,11 @@ const Index = () => {
                 <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
-            <div className="relative overflow-hidden rounded-3xl">
-              <motion.img 
+            <div className="relative overflow-hidden rounded-3xl group">
+              <img 
                 src="/lovable-uploads/db413689-f513-4637-9b37-ab7b1fae71f4.png"
                 alt="Green Hills"
-                className="w-full h-[600px] object-cover transform transition-transform duration-700 hover:scale-110"
-                initial={{ scale: 1 }}
-                whileHover={{ scale: 1.1 }}
+                className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
           </div>
@@ -131,7 +129,7 @@ const Index = () => {
               <div className="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
                 <Wind className="h-16 w-16 text-green-500 mx-auto" />
@@ -144,7 +142,7 @@ const Index = () => {
                 Tailored solutions for residential, commercial, and industrial use.
               </p>
               <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
-                Learn More <ArrowRight className="h-5 w-5 ml-2" />
+                Learn More <ArrowRight className="ml-2" size={16} />
               </Button>
             </div>
             <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -159,7 +157,7 @@ const Index = () => {
                 Turnkey solutions for residential and commercial purposes.
               </p>
               <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
-                Learn More <ArrowRight className="h-5 w-5 ml-2" />
+                Learn More <ArrowRight className="ml-2" size={16} />
               </Button>
             </div>
             <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
@@ -174,22 +172,7 @@ const Index = () => {
                 Scalable and cost-effective solutions for continuous power supply.
               </p>
               <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
-                Learn More <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-            </div>
-            <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="mb-6">
-                <Leaf className="h-16 w-16 text-green-500 mx-auto" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#1A1F2C]">Energy Storage</h3>
-              <p className="text-gray-600 mb-4 text-lg">
-                Advanced battery systems for efficient energy storage.
-              </p>
-              <p className="text-gray-600 mb-6 text-lg">
-                Smart grid integration for optimal power management.
-              </p>
-              <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
-                Learn More <ArrowRight className="h-5 w-5 ml-2" />
+                Learn More <ArrowRight className="ml-2" size={16} />
               </Button>
             </div>
           </div>
