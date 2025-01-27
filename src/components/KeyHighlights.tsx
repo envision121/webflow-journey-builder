@@ -30,7 +30,7 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
   }, [end, duration]);
 
   return (
-    <span className="text-6xl font-bold text-[rgb(74,171,61)]">
+    <span className="text-[4.5rem] font-bold text-[#4AAB3D]">
       {prefix}{count}{suffix}
     </span>
   );
@@ -92,14 +92,43 @@ const KeyHighlights = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[#F8FAF8]">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Our Key Solutions</h2>
-          <div className="h-1 w-20 bg-[rgb(74,171,61)] rounded mx-auto"></div>
+        <div className="text-center mb-16">
+          <h2 className="text-[2.5rem] font-bold text-[#1B4332]">Achievements and Expertise</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {isVisible && (
+            <>
+              <div className="bg-white rounded-2xl shadow-sm p-10 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="mb-4">
+                  <Counter end={5} suffix="+ MW" duration={3000} />
+                </div>
+                <p className="text-[#4B5563] text-lg">Small wind systems installed across India</p>
+                <div className="mt-6 h-1 w-full bg-[#4AAB3D] rounded-full"></div>
+              </div>
+              
+              <div className="bg-white rounded-2xl shadow-sm p-10 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="mb-4">
+                  <Counter end={15} suffix="+ yrs" duration={3000} />
+                </div>
+                <p className="text-[#4B5563] text-lg">of experience</p>
+                <div className="mt-6 h-1 w-full bg-[#4AAB3D] rounded-full"></div>
+              </div>
+              
+              <div className="bg-white rounded-2xl shadow-sm p-10 transform hover:-translate-y-2 transition-all duration-300">
+                <div className="mb-4">
+                  <Counter end={100} suffix="%" duration={3000} />
+                </div>
+                <p className="text-[#4B5563] text-lg">Proven expertise in integrating hybrid energy systems and solar water pumps</p>
+                <div className="mt-6 h-1 w-full bg-[#4AAB3D] rounded-full"></div>
+              </div>
+            </>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
           {solutions.map((solution, index) => (
             <div
               key={index}
@@ -115,46 +144,13 @@ const KeyHighlights = () => {
                 </ul>
                 <a
                   href="#"
-                  className="text-[rgb(74,171,61)] hover:text-[rgb(60,150,50)] transition-colors inline-flex items-center group"
+                  className="text-[#4AAB3D] hover:text-[#3C9632] transition-colors inline-flex items-center group"
                 >
                   Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-20">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 text-[#1B4332]">Achievements and Expertise</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {isVisible && (
-                <>
-                  <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in">
-                    <div className="mb-6">
-                      <Counter end={5} suffix="+ MW" duration={3000} />
-                    </div>
-                    <p className="text-gray-600 text-base">Small wind systems installed across India</p>
-                    <div className="mt-6 h-1 w-0 bg-[rgb(74,171,61)] rounded-full transition-all duration-1000 group-hover:w-full animate-[grow_1s_ease-out_forwards]"></div>
-                  </div>
-                  <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                    <div className="mb-6">
-                      <Counter end={15} suffix="+ yrs" duration={3000} />
-                    </div>
-                    <p className="text-gray-600 text-base">of experience</p>
-                    <div className="mt-6 h-1 w-0 bg-[rgb(74,171,61)] rounded-full transition-all duration-1000 group-hover:w-full animate-[grow_1s_ease-out_forwards_0.2s]"></div>
-                  </div>
-                  <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                    <div className="mb-6">
-                      <Counter end={100} suffix="%" duration={3000} />
-                    </div>
-                    <p className="text-gray-600 text-base">Proven expertise in integrating hybrid energy systems and solar water pumps</p>
-                    <div className="mt-6 h-1 w-0 bg-[rgb(74,171,61)] rounded-full transition-all duration-1000 group-hover:w-full animate-[grow_1s_ease-out_forwards_0.4s]"></div>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
         </div>
       </div>
     </section>
