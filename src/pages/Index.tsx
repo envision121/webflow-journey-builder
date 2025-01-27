@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow pt-[120px]"> {/* Added padding-top to account for fixed navbar */}
         <Hero />
         <Mission />
         <KeyHighlights />
