@@ -92,4 +92,26 @@
   body {
     @apply bg-background text-foreground min-h-screen;
   }
+
+  .section-title {
+    @apply uppercase tracking-wider text-sm font-semibold text-primary mb-4;
+  }
+
+  .main-heading {
+    @apply text-[1.8rem] md:text-[1.8rem] font-bold leading-tight mb-6;
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
