@@ -12,7 +12,7 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 142 76% 36%;
+    --primary: 134 57% 48%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -46,6 +46,11 @@
 
   .main-heading {
     @apply text-[2.5rem] md:text-[3rem] font-bold leading-tight mb-6;
+  }
+
+  /* Custom button styles */
+  .btn-primary {
+    @apply bg-[rgb(74,171,61)] hover:bg-[rgb(60,150,50)] text-white transition-colors duration-300;
   }
 
   /* Remove the circular dependency and use the animation directly */

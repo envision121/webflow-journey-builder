@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
-console.log("Hero.tsx - Rendering Hero component");
-
 const Hero = () => {
-  console.log("Hero.tsx - Inside Hero component render");
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -32,7 +29,6 @@ const Hero = () => {
   ];
 
   useEffect(() => {
-    console.log("Hero.tsx - Setting up slide interval");
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
@@ -74,13 +70,13 @@ const Hero = () => {
                 <div className="flex gap-4">
                   <a
                     href="#contact"
-                    className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full inline-flex items-center transition-all duration-300"
+                    className="bg-[rgb(74,171,61)] hover:bg-[rgb(60,150,50)] text-white px-8 py-3 rounded-full inline-flex items-center transition-all duration-300"
                   >
                     {slide.button1}
                   </a>
                   <a
                     href="#products"
-                    className="bg-white hover:bg-white/90 text-primary px-8 py-3 rounded-full transition-all duration-300"
+                    className="bg-white hover:bg-white/90 text-[rgb(74,171,61)] px-8 py-3 rounded-full transition-all duration-300"
                   >
                     {slide.button2}
                   </a>

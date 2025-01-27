@@ -38,7 +38,7 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
 
 const solutions = [
   {
-    icon: <Wind className="h-12 w-12 text-primary bg-primary/10 p-2 rounded-full" />,
+    icon: <Wind className="h-12 w-12 text-[rgb(74,171,61)] bg-[rgb(74,171,61)]/10 p-2 rounded-full" />,
     title: "Wind Systems",
     description: [
       "Harness wind energy with our high-efficiency turbines.",
@@ -46,7 +46,7 @@ const solutions = [
     ],
   },
   {
-    icon: <Sun className="h-12 w-12 text-primary bg-primary/10 p-2 rounded-full" />,
+    icon: <Sun className="h-12 w-12 text-[rgb(74,171,61)] bg-[rgb(74,171,61)]/10 p-2 rounded-full" />,
     title: "Solar Systems",
     description: [
       "Efficient solar PV panels and rooftop systems for energy independence.",
@@ -54,7 +54,7 @@ const solutions = [
     ],
   },
   {
-    icon: <Battery className="h-12 w-12 text-primary bg-primary/10 p-2 rounded-full" />,
+    icon: <Battery className="h-12 w-12 text-[rgb(74,171,61)] bg-[rgb(74,171,61)]/10 p-2 rounded-full" />,
     title: "Hybrid Systems",
     description: [
       "The best of solar and wind combined for reliable energy generation.",
@@ -62,21 +62,21 @@ const solutions = [
     ],
   },
   {
-    icon: <Plug className="h-12 w-12 text-primary bg-primary/10 p-2 rounded-full" />,
+    icon: <Plug className="h-12 w-12 text-[rgb(74,171,61)] bg-[rgb(74,171,61)]/10 p-2 rounded-full" />,
     title: "Solar Pump Systems",
     description: [
       "Eco-friendly and cost-efficient water pumping solutions.",
     ],
   },
   {
-    icon: <Factory className="h-12 w-12 text-primary bg-primary/10 p-2 rounded-full" />,
+    icon: <Factory className="h-12 w-12 text-[rgb(74,171,61)] bg-[rgb(74,171,61)]/10 p-2 rounded-full" />,
     title: "Exhaust Wind Turbines",
     description: [
       "Innovative turbines that utilize waste airflow for additional energy generation.",
     ],
   },
   {
-    icon: <Leaf className="h-12 w-12 text-primary bg-primary/10 p-2 rounded-full" />,
+    icon: <Leaf className="h-12 w-12 text-[rgb(74,171,61)] bg-[rgb(74,171,61)]/10 p-2 rounded-full" />,
     title: "Aero Leaf Wind Turbines",
     description: [
       "Compact, efficient, and aesthetically pleasing turbines ideal for urban and rural setups.",
@@ -85,7 +85,6 @@ const solutions = [
 ];
 
 const KeyHighlights = () => {
-  console.log("KeyHighlights.tsx - Rendering KeyHighlights component");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -97,7 +96,7 @@ const KeyHighlights = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Key Solutions</h2>
-          <div className="h-1 w-20 bg-primary rounded mx-auto"></div>
+          <div className="h-1 w-20 bg-[rgb(74,171,61)] rounded mx-auto"></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
@@ -115,7 +114,7 @@ const KeyHighlights = () => {
                 </ul>
                 <a
                   href="#"
-                  className="text-primary hover:text-primary-dark transition-colors inline-flex items-center group"
+                  className="text-[rgb(74,171,61)] hover:text-[rgb(60,150,50)] transition-colors inline-flex items-center group"
                 >
                   Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
@@ -124,7 +123,7 @@ const KeyHighlights = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-br from-primary/5 to-secondary/5 p-8 rounded-lg shadow-lg">
+        <div className="mt-16 bg-gradient-to-br from-[rgb(74,171,61)]/5 to-secondary/5 p-8 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-8 text-center">Achievements and Expertise</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {isVisible && (
