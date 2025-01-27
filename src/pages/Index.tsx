@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Mission from "@/components/Mission";
 import KeyHighlights from "@/components/KeyHighlights";
@@ -13,6 +14,7 @@ const Index = () => {
   console.log("Index.tsx - Inside Index component render");
   return (
     <main className="min-h-screen">
+      <Navbar />
       <Hero />
       <Mission />
       <KeyHighlights />

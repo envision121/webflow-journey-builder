@@ -48,7 +48,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative h-[600px] overflow-hidden">
+    <div className="relative h-[600px] mt-16 overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={index}
