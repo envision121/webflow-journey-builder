@@ -9,21 +9,25 @@ const Services = () => {
       icon: <Wind className="w-12 h-12" />,
       title: "Wind Energy Systems",
       description: "Cutting-edge wind turbines and systems for optimal energy generation",
+      hoverColor: "#F2FCE2" // Soft Green
     },
     {
       icon: <Sun className="w-12 h-12" />,
       title: "Solar Solutions",
       description: "Advanced solar panels and photovoltaic systems for sustainable power",
+      hoverColor: "#FEF7CD" // Soft Yellow
     },
     {
       icon: <Battery className="w-12 h-12" />,
       title: "Hybrid Systems",
       description: "Integrated renewable energy solutions for uninterrupted power supply",
+      hoverColor: "#E5DEFF" // Soft Purple
     },
     {
       icon: <Zap className="w-12 h-12" />,
       title: "Smart Grid Integration",
       description: "Intelligent power distribution and management systems",
+      hoverColor: "#D3E4FD" // Soft Blue
     },
   ];
 
@@ -47,7 +51,18 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="group relative flex">
-              <div className="flex-grow p-6 transition-all duration-300 group-hover:bg-[#EBF8FF] rounded-lg">
+              <div 
+                className="flex-grow p-6 transition-all duration-300 rounded-lg"
+                style={{ 
+                  ['--hover-color' as string]: service.hoverColor,
+                }}
+                onMouseEnter={e => {
+                  (e.target as HTMLElement).style.backgroundColor = service.hoverColor;
+                }}
+                onMouseLeave={e => {
+                  (e.target as HTMLElement).style.backgroundColor = 'transparent';
+                }}
+              >
                 <div className="text-[rgb(74,171,61)] mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
