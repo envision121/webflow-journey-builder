@@ -13,23 +13,17 @@ console.log("Index.tsx - Starting render");
 const Index = () => {
   console.log("Index.tsx - Inside Index component render");
   return (
-    <div className="w-full">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="w-full">
+      <main className="flex-grow">
         <Hero />
         <Mission />
-        <div className="w-full">
-          <KeyHighlights />
-        </div>
-        <div className="w-full">
-          <Services />
-        </div>
-        <div className="w-full">
-          <Products />
-        </div>
+        <KeyHighlights />
+        <Services />
+        <Products />
         <Gallery />
         <CTA />
-      </div>
+      </main>
       <Footer />
     </div>
   );
