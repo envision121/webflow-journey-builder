@@ -14,10 +14,10 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen">
           <Toaster />
           <Sonner />
-          <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/empee' : ''}>
+          <BrowserRouter>
             <Routes>
               <Route path="/" element={<Index />} />
             </Routes>

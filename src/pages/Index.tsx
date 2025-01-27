@@ -9,8 +9,10 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  console.log("Index component rendering"); // Debug log
+  
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       <Hero />
       <Mission />
       <Services />
