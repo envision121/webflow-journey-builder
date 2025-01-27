@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sun, Zap, Wind, Leaf, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Sun, Zap, Wind, Leaf, MapPin, Phone, Check } from "lucide-react";
 
 const Index = () => {
   return (
@@ -40,7 +40,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Rest of the existing content */}
       {/* Hero Section */}
       <section className="relative h-screen flex items-center bg-gradient-to-r from-green-900 to-green-700 px-4">
         <div className="container mx-auto">
@@ -66,36 +65,53 @@ const Index = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-green-600 font-semibold mb-4">ABOUT US</h2>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-6">
+              <h2 className="text-[#4CAF50] text-2xl font-semibold">ABOUT US</h2>
+              <h3 className="text-4xl font-bold text-[#1A1F2C]">
                 Pioneering Green Energy Solutions
               </h3>
-              <p className="text-gray-600 mb-8">
-                At Green Solutions Inc, we're passionate about contributing to a cleaner, more sustainable future. Our innovative energy solutions are designed to help businesses and homeowners reduce their carbon footprint while saving on energy costs.
+              <p className="text-gray-600 leading-relaxed">
+                At Empee Green Energy, we're committed to revolutionizing the energy sector through innovative renewable solutions. Our mission is to accelerate the global transition to sustainable energy, making it accessible and efficient for everyone.
               </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center gap-2">
-                  <Leaf className="text-green-500" size={20} />
-                  <span>Certified Products</span>
+              <div className="grid grid-cols-2 gap-6">
+                <div className="flex items-center gap-3">
+                  <div className="rounded-full bg-green-100 p-1">
+                    <Check className="h-4 w-4 text-green-600" />
+                  </div>
+                  <span className="text-gray-700">Industry Leading Technology</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="text-green-500" size={20} />
-                  <span>Smart Tech Solutions</span>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-full bg-green-100 p-1">
+                    <Check className="h-4 w-4 text-green-600" />
+                  </div>
+                  <span className="text-gray-700">Certified Professionals</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-full bg-green-100 p-1">
+                    <Check className="h-4 w-4 text-green-600" />
+                  </div>
+                  <span className="text-gray-700">24/7 Support & Maintenance</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="rounded-full bg-green-100 p-1">
+                    <Check className="h-4 w-4 text-green-600" />
+                  </div>
+                  <span className="text-gray-700">Sustainable Solutions</span>
                 </div>
               </div>
-              <Button className="bg-green-500 hover:bg-green-600">
-                Learn More
+              <Button className="bg-green-600 hover:bg-green-700 gap-2">
+                Discover Our Services
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
-            <div className="rounded-lg overflow-hidden">
+            <div className="relative">
               <img 
-                src="/lovable-uploads/5f06c520-cd37-4c0d-8a2a-1d0ae906112c.png" 
-                alt="Green Energy" 
-                className="w-full h-[400px] object-cover rounded-lg"
+                src="/lovable-uploads/db413689-f513-4637-9b37-ab7b1fae71f4.png"
+                alt="Green Hills"
+                className="w-full h-[500px] object-cover rounded-3xl shadow-xl"
               />
             </div>
           </div>
@@ -105,31 +121,56 @@ const Index = () => {
       {/* Key Solutions Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-2xl font-bold mb-12">Our Key Solutions</h2>
+          <h2 className="text-3xl font-bold text-center text-[#1A1F2C] mb-16">
+            Our Key Solutions
+            <div className="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: <Wind className="text-green-500" size={24} />,
-                title: "Wind Systems",
-                description: "Harnessing wind power for sustainable energy generation"
-              },
-              {
-                icon: <Sun className="text-green-500" size={24} />,
-                title: "Solar Solutions",
-                description: "Converting sunlight into clean, renewable energy"
-              },
-              {
-                icon: <Zap className="text-green-500" size={24} />,
-                title: "Hybrid Systems",
-                description: "Combining multiple renewable sources for optimal efficiency"
-              }
-            ].map((solution, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <div className="mb-4">{solution.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{solution.title}</h3>
-                <p className="text-gray-600">{solution.description}</p>
+            <div className="bg-white p-8 rounded-lg text-center">
+              <div className="mb-6">
+                <Wind className="h-12 w-12 text-green-500 mx-auto" />
               </div>
-            ))}
+              <h3 className="text-xl font-bold mb-4">Wind Systems</h3>
+              <p className="text-gray-600 mb-4">
+                Harness wind energy with our high-efficiency turbines.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Tailored solutions for residential, commercial, and industrial use.
+              </p>
+              <Button variant="link" className="text-green-600 hover:text-green-700">
+                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </div>
+            <div className="bg-white p-8 rounded-lg text-center">
+              <div className="mb-6">
+                <Sun className="h-12 w-12 text-green-500 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Solar Systems</h3>
+              <p className="text-gray-600 mb-4">
+                Efficient solar PV panels and rooftop systems for energy independence.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Turnkey solutions for residential and commercial purposes.
+              </p>
+              <Button variant="link" className="text-green-600 hover:text-green-700">
+                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </div>
+            <div className="bg-white p-8 rounded-lg text-center">
+              <div className="mb-6">
+                <Zap className="h-12 w-12 text-green-500 mx-auto" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Hybrid Systems</h3>
+              <p className="text-gray-600 mb-4">
+                The best of solar and wind combined for reliable energy generation.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Scalable and cost-effective solutions for continuous power supply.
+              </p>
+              <Button variant="link" className="text-green-600 hover:text-green-700">
+                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
