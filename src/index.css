@@ -58,10 +58,11 @@
     @apply opacity-0;
     animation: fadeIn 0.5s ease-out forwards;
   }
+}
 
-  .text-sm {
-    font-size: 0.950rem;
-  }
+/* Define custom text-sm size */
+.text-sm {
+  font-size: 0.950rem !important;
 }
 
 /* Define the animation keyframes outside of the @layer */
