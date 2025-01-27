@@ -51,9 +51,9 @@ const Products = () => {
                 <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
                 <ul className="space-y-2 mb-6 flex-grow">
                   {category.products.map((product, idx) => (
-                    <li key={idx} className="text-gray-600 flex items-center">
-                      <CheckCircle2 className="w-4 h-4 text-[rgb(74,171,61)] mr-2 flex-shrink-0" />
-                      {product}
+                    <li key={idx} className="text-gray-600 flex items-start">
+                      <CheckCircle2 className="w-4 h-4 text-[rgb(74,171,61)] mr-2 flex-shrink-0 mt-1" />
+                      <span className="text-sm whitespace-normal">{product}</span>
                     </li>
                   ))}
                 </ul>
