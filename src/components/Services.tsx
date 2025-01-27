@@ -47,7 +47,7 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="group relative flex">
-              <div className="flex-grow">
+              <div className="flex-grow p-6 transition-all duration-300 group-hover:bg-[#EBF8FF] rounded-lg">
                 <div className="text-[rgb(74,171,61)] mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
