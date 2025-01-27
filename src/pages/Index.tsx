@@ -65,53 +65,57 @@ const Index = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <h2 className="text-[#4CAF50] text-2xl font-semibold">ABOUT US</h2>
-              <h3 className="text-4xl font-bold text-[#1A1F2C]">
-                Pioneering Green Energy Solutions
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                At Empee Green Energy, we're committed to revolutionizing the energy sector through innovative renewable solutions. Our mission is to accelerate the global transition to sustainable energy, making it accessible and efficient for everyone.
-              </p>
-              <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-[#4CAF50] text-xl font-semibold tracking-wide uppercase mb-4">ABOUT US</h2>
+                <h3 className="text-4xl font-bold text-[#1A1F2C] leading-tight mb-6">
+                  Pioneering Green Energy Solutions
+                </h3>
+                <p className="text-gray-600 text-lg leading-relaxed">
+                  At Empee Green Energy, we're committed to revolutionizing the energy sector through innovative renewable solutions. Our mission is to accelerate the global transition to sustainable energy, making it accessible and efficient for everyone.
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-8">
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-green-100 p-1">
-                    <Check className="h-4 w-4 text-green-600" />
+                  <div className="rounded-full bg-green-100 p-2">
+                    <Check className="h-5 w-5 text-green-600" />
                   </div>
-                  <span className="text-gray-700">Industry Leading Technology</span>
+                  <span className="text-gray-700 font-medium">Industry Leading Technology</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-green-100 p-1">
-                    <Check className="h-4 w-4 text-green-600" />
+                  <div className="rounded-full bg-green-100 p-2">
+                    <Check className="h-5 w-5 text-green-600" />
                   </div>
-                  <span className="text-gray-700">Certified Professionals</span>
+                  <span className="text-gray-700 font-medium">Certified Professionals</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-green-100 p-1">
-                    <Check className="h-4 w-4 text-green-600" />
+                  <div className="rounded-full bg-green-100 p-2">
+                    <Check className="h-5 w-5 text-green-600" />
                   </div>
-                  <span className="text-gray-700">24/7 Support & Maintenance</span>
+                  <span className="text-gray-700 font-medium">24/7 Support & Maintenance</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-green-100 p-1">
-                    <Check className="h-4 w-4 text-green-600" />
+                  <div className="rounded-full bg-green-100 p-2">
+                    <Check className="h-5 w-5 text-green-600" />
                   </div>
-                  <span className="text-gray-700">Sustainable Solutions</span>
+                  <span className="text-gray-700 font-medium">Sustainable Solutions</span>
                 </div>
               </div>
-              <Button className="bg-green-600 hover:bg-green-700 gap-2">
+              <Button className="bg-green-600 hover:bg-green-700 gap-2 px-8 py-6 text-lg">
                 Discover Our Services
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-5 w-5" />
               </Button>
             </div>
-            <div className="relative">
-              <img 
+            <div className="relative overflow-hidden rounded-3xl">
+              <motion.img 
                 src="/lovable-uploads/db413689-f513-4637-9b37-ab7b1fae71f4.png"
                 alt="Green Hills"
-                className="w-full h-[500px] object-cover rounded-3xl shadow-xl"
+                className="w-full h-[600px] object-cover transform transition-transform duration-700 hover:scale-110"
+                initial={{ scale: 1 }}
+                whileHover={{ scale: 1.1 }}
               />
             </div>
           </div>
@@ -119,56 +123,73 @@ const Index = () => {
       </section>
 
       {/* Key Solutions Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-[#1A1F2C] mb-16">
-            Our Key Solutions
-            <div className="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg text-center">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-[#1A1F2C]">
+              Our Key Solutions
+              <div className="w-24 h-1 bg-green-500 mx-auto mt-4"></div>
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
-                <Wind className="h-12 w-12 text-green-500 mx-auto" />
+                <Wind className="h-16 w-16 text-green-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Wind Systems</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-2xl font-bold mb-4 text-[#1A1F2C]">Wind Systems</h3>
+              <p className="text-gray-600 mb-4 text-lg">
                 Harness wind energy with our high-efficiency turbines.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-lg">
                 Tailored solutions for residential, commercial, and industrial use.
               </p>
-              <Button variant="link" className="text-green-600 hover:text-green-700">
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
+                Learn More <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </div>
-            <div className="bg-white p-8 rounded-lg text-center">
+            <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
-                <Sun className="h-12 w-12 text-green-500 mx-auto" />
+                <Sun className="h-16 w-16 text-green-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Solar Systems</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-2xl font-bold mb-4 text-[#1A1F2C]">Solar Systems</h3>
+              <p className="text-gray-600 mb-4 text-lg">
                 Efficient solar PV panels and rooftop systems for energy independence.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-lg">
                 Turnkey solutions for residential and commercial purposes.
               </p>
-              <Button variant="link" className="text-green-600 hover:text-green-700">
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
+                Learn More <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </div>
-            <div className="bg-white p-8 rounded-lg text-center">
+            <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-6">
-                <Zap className="h-12 w-12 text-green-500 mx-auto" />
+                <Zap className="h-16 w-16 text-green-500 mx-auto" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Hybrid Systems</h3>
-              <p className="text-gray-600 mb-4">
+              <h3 className="text-2xl font-bold mb-4 text-[#1A1F2C]">Hybrid Systems</h3>
+              <p className="text-gray-600 mb-4 text-lg">
                 The best of solar and wind combined for reliable energy generation.
               </p>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-lg">
                 Scalable and cost-effective solutions for continuous power supply.
               </p>
-              <Button variant="link" className="text-green-600 hover:text-green-700">
-                Learn More <ArrowRight className="h-4 w-4 ml-2" />
+              <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
+                Learn More <ArrowRight className="h-5 w-5 ml-2" />
+              </Button>
+            </div>
+            <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="mb-6">
+                <Leaf className="h-16 w-16 text-green-500 mx-auto" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-[#1A1F2C]">Energy Storage</h3>
+              <p className="text-gray-600 mb-4 text-lg">
+                Advanced battery systems for efficient energy storage.
+              </p>
+              <p className="text-gray-600 mb-6 text-lg">
+                Smart grid integration for optimal power management.
+              </p>
+              <Button variant="link" className="text-green-600 hover:text-green-700 text-lg">
+                Learn More <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </div>
           </div>
