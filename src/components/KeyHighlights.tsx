@@ -95,7 +95,8 @@ const KeyHighlights = () => {
     <section className="py-16 bg-[#F8FAF8]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-[#1B4332] mb-4">Key Solutions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1B4332] mb-4">Our Key Solutions</h2>
+          <div className="w-24 h-1 bg-[#4AAB3D] mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
