@@ -9,25 +9,25 @@ const Hero = () => {
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1",
+      image: "/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png",
       title: "Powering Tomorrow's World",
       description: "Innovative renewable energy solutions for a sustainable future",
-      button1: "Get Started →",
-      button2: "Learn More",
+      button1: "Contact Us",
+      button2: "View Products",
     },
     {
       image: "https://images.unsplash.com/photo-1509391366360-2e959784a276",
       title: "Clean Energy Revolution",
       description: "Leading the transition to renewable energy technologies",
-      button1: "Get Started →",
-      button2: "Learn More",
+      button1: "Contact Us",
+      button2: "View Products",
     },
     {
       image: "https://images.unsplash.com/photo-1509390144018-eeef0cba1092",
       title: "Sustainable Solutions",
       description: "Creating a greener future for generations to come",
-      button1: "Get Started →",
-      button2: "Learn More",
+      button1: "Contact Us",
+      button2: "View Products",
     },
   ];
 
@@ -60,33 +60,27 @@ const Hero = () => {
           <img
             src={slide.image}
             alt={slide.title}
-            className="w-full h-full object-cover transform scale-110 transition-transform duration-[2000ms]"
-            style={{
-              transform: index === currentSlide ? "scale(1)" : "scale(1.1)",
-            }}
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 flex items-center z-20">
             <div className="container mx-auto px-4">
-              <div className="max-w-3xl space-y-6 mt-16">
-                <h1 className="text-[50px] font-bold text-white opacity-0 animate-slideIn"
-                    style={{ animationDelay: "200ms", animationFillMode: "forwards" }}>
+              <div className="max-w-3xl">
+                <h1 className="text-5xl font-bold text-white mb-6">
                   {slide.title}
                 </h1>
-                <p className="text-xl md:text-2xl text-white/90 opacity-0 animate-slideIn"
-                   style={{ animationDelay: "400ms", animationFillMode: "forwards" }}>
+                <p className="text-xl text-white/90 mb-8">
                   {slide.description}
                 </p>
-                <div className="flex gap-4 pt-4 opacity-0 animate-slideIn"
-                     style={{ animationDelay: "600ms", animationFillMode: "forwards" }}>
+                <div className="flex gap-4">
                   <a
                     href="#contact"
-                    className="bg-white hover:bg-white/90 text-black px-8 py-4 rounded-full inline-flex items-center group transition-all duration-300"
+                    className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full inline-flex items-center transition-all duration-300"
                   >
                     {slide.button1}
                   </a>
                   <a
-                    href="#about"
-                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full transition-all duration-300"
+                    href="#products"
+                    className="bg-white hover:bg-white/90 text-primary px-8 py-3 rounded-full transition-all duration-300"
                   >
                     {slide.button2}
                   </a>
@@ -96,33 +90,29 @@ const Hero = () => {
           </div>
         </div>
       ))}
-      <div className="absolute bottom-16 left-0 right-0 z-30 flex justify-between items-center px-8">
-        <button
-          onClick={prevSlide}
-          className="bg-white/10 hover:bg-white/20 p-2 rounded-full backdrop-blur-sm transition-all duration-300"
-        >
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </button>
-        
-        <div className="flex gap-2">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "w-8 bg-white" : "bg-white/50"
-              }`}
-            />
-          ))}
-        </div>
-        
-        <button
-          onClick={nextSlide}
-          className="bg-white/10 hover:bg-white/20 p-2 rounded-full backdrop-blur-sm transition-all duration-300"
-        >
-          <ChevronRight className="h-6 w-6 text-white" />
-        </button>
+      <div className="absolute bottom-8 left-0 right-0 z-30 flex justify-center gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? "bg-white" : "bg-white/50"
+            }`}
+          />
+        ))}
       </div>
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 p-2 rounded-full backdrop-blur-sm transition-all duration-300"
+      >
+        <ChevronLeft className="h-6 w-6 text-white" />
+      </button>
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-white/20 p-2 rounded-full backdrop-blur-sm transition-all duration-300"
+      >
+        <ChevronRight className="h-6 w-6 text-white" />
+      </button>
     </div>
   );
 };
