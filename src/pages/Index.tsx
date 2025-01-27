@@ -8,24 +8,30 @@ import Gallery from "@/components/Gallery";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
-console.log("Index.tsx - Rendering Index component");
+console.log("Index.tsx - Starting render");
 
 const Index = () => {
   console.log("Index.tsx - Inside Index component render");
   return (
-    <>
+    <div className="w-full">
       <Navbar />
-      <main>
+      <div className="w-full">
         <Hero />
         <Mission />
-        <KeyHighlights />
-        <Services />
-        <Products />
+        <div className="w-full">
+          <KeyHighlights />
+        </div>
+        <div className="w-full">
+          <Services />
+        </div>
+        <div className="w-full">
+          <Products />
+        </div>
         <Gallery />
         <CTA />
-      </main>
+      </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -85,34 +85,17 @@ const solutions = [
 ];
 
 const KeyHighlights = () => {
+  console.log("KeyHighlights.tsx - Rendering KeyHighlights component");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('achievements');
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
+    setIsVisible(true);
   }, []);
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 w-full">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12 animate-slideIn">
+        <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Key Solutions</h2>
           <div className="h-1 w-20 bg-primary rounded mx-auto"></div>
         </div>

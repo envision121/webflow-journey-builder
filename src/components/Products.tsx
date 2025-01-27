@@ -1,6 +1,8 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const Products = () => {
+  console.log("Products.tsx - Rendering Products component");
+  
   const categories = [
     {
       title: "Wind System",
@@ -25,9 +27,9 @@ const Products = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50" id="products">
+    <section className="py-24 bg-gray-50 w-full" id="products">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 opacity-0 animate-fadeIn">
+        <div className="text-center mb-16">
           <h2 className="section-title">Our Products</h2>
           <h3 className="main-heading font-medium">Innovative Solutions</h3>
         </div>
@@ -35,8 +37,7 @@ const Products = () => {
           {categories.map((category, index) => (
             <div
               key={index}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 animate-fadeIn flex flex-col"
-              style={{ animationDelay: `${index * 200}ms` }}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -46,9 +47,9 @@ const Products = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               </div>
-              <div className="p-6 flex-grow flex flex-col">
+              <div className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{category.title}</h3>
-                <ul className="space-y-2 mb-6 flex-grow">
+                <ul className="space-y-2 mb-6">
                   {category.products.map((product, idx) => (
                     <li key={idx} className="text-gray-600 flex items-center">
                       <CheckCircle2 className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
@@ -58,7 +59,7 @@ const Products = () => {
                 </ul>
                 <a
                   href="#"
-                  className="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-full inline-flex items-center group transition-all duration-300 justify-center mt-auto"
+                  className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full inline-flex items-center group transition-all duration-300 justify-center w-full"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
