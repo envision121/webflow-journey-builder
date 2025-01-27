@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
+console.log("Hero.tsx - Rendering Hero component");
+
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 

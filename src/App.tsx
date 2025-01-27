@@ -5,16 +5,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 
-console.log("App component rendering");
+console.log("App.tsx - Rendering App component");
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  console.log("Inside App component");
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-background text-foreground">
           <Toaster />
           <Sonner />
           <BrowserRouter>
