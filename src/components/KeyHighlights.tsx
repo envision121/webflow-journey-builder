@@ -110,7 +110,7 @@ const KeyHighlights = () => {
                 <h3 className="text-xl font-semibold">{solution.title}</h3>
                 <ul className="space-y-2">
                   {solution.description.map((item, idx) => (
-                    <li key={idx} className="text-gray-600">{item}</li>
+                    <li key={idx} className="text-gray-600 text-sm">{item}</li>
                   ))}
                 </ul>
                 <a
@@ -134,22 +134,22 @@ const KeyHighlights = () => {
                     <div className="mb-6">
                       <Counter end={5} suffix="+ MW" duration={3000} />
                     </div>
-                    <p className="text-gray-600 text-lg">Small wind systems installed across India</p>
-                    <div className="mt-6 h-1 w-full bg-[rgb(74,171,61)] rounded-full"></div>
+                    <p className="text-gray-600 text-base">Small wind systems installed across India</p>
+                    <div className="mt-6 h-1 w-0 bg-[rgb(74,171,61)] rounded-full transition-all duration-1000 group-hover:w-full animate-[grow_1s_ease-out_forwards]"></div>
                   </div>
                   <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                     <div className="mb-6">
                       <Counter end={15} suffix="+ yrs" duration={3000} />
                     </div>
-                    <p className="text-gray-600 text-lg">of experience</p>
-                    <div className="mt-6 h-1 w-full bg-[rgb(74,171,61)] rounded-full"></div>
+                    <p className="text-gray-600 text-base">of experience</p>
+                    <div className="mt-6 h-1 w-0 bg-[rgb(74,171,61)] rounded-full transition-all duration-1000 group-hover:w-full animate-[grow_1s_ease-out_forwards_0.2s]"></div>
                   </div>
                   <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
                     <div className="mb-6">
                       <Counter end={100} suffix="%" duration={3000} />
                     </div>
-                    <p className="text-gray-600 text-lg">Proven expertise in integrating hybrid energy systems and solar water pumps</p>
-                    <div className="mt-6 h-1 w-full bg-[rgb(74,171,61)] rounded-full"></div>
+                    <p className="text-gray-600 text-base">Proven expertise in integrating hybrid energy systems and solar water pumps</p>
+                    <div className="mt-6 h-1 w-0 bg-[rgb(74,171,61)] rounded-full transition-all duration-1000 group-hover:w-full animate-[grow_1s_ease-out_forwards_0.4s]"></div>
                   </div>
                 </>
               )}
