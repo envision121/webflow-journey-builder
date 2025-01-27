@@ -10,6 +10,7 @@ console.log("App.tsx - Rendering App component");
 const queryClient = new QueryClient();
 
 const App = () => {
+  console.log("App.tsx - Inside App component render");
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

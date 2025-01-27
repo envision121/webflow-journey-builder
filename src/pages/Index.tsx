@@ -9,8 +9,9 @@ import Footer from "@/components/Footer";
 console.log("Index.tsx - Rendering Index component");
 
 const Index = () => {
+  console.log("Index.tsx - Inside Index component render");
   return (
-    <main>
+    <main className="min-h-screen">
       <Hero />
       <Mission />
       <Services />

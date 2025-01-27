@@ -4,6 +4,7 @@ import { ChevronRight, ChevronLeft } from "lucide-react";
 console.log("Hero.tsx - Rendering Hero component");
 
 const Hero = () => {
+  console.log("Hero.tsx - Inside Hero component render");
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -31,6 +32,7 @@ const Hero = () => {
   ];
 
   useEffect(() => {
+    console.log("Hero.tsx - Setting up slide interval");
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
