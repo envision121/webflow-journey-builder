@@ -59,7 +59,7 @@ const Products = () => {
                 </ul>
                 <a
                   href="#"
-                  className="bg-[rgb(74,171,61)] hover:bg-[rgb(60,150,50)] text-white px-6 py-3 rounded-full inline-flex items-center group transition-all duration-300 justify-center"
+                  className="bg-[rgb(74,171,61)] hover:bg-[rgb(60,150,50)] text-white px-8 py-4 rounded-full inline-flex items-center group transition-all duration-300 justify-center"
                 >
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
