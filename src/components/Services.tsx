@@ -52,9 +52,10 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className="group relative flex">
               <div 
-                className="flex-grow p-6 transition-all duration-300 rounded-lg"
+                className="flex-grow p-6 transition-all duration-300 rounded-lg cursor-pointer"
                 style={{ 
-                  ['--hover-color' as string]: service.hoverColor,
+                  backgroundColor: 'transparent',
+                  transition: 'background-color 0.3s ease'
                 }}
                 onMouseEnter={e => {
                   (e.target as HTMLElement).style.backgroundColor = service.hoverColor;
