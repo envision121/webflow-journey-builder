@@ -98,6 +98,7 @@ const KeyHighlights = () => {
           <h2 className="text-3xl font-bold mb-4">Our Key Solutions</h2>
           <div className="h-1 w-20 bg-[rgb(74,171,61)] rounded mx-auto"></div>
         </div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.map((solution, index) => (
             <div
@@ -123,31 +124,35 @@ const KeyHighlights = () => {
           ))}
         </div>
 
-        <div className="mt-16 bg-white p-8 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-bold mb-8 text-center">Achievements and Expertise</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {isVisible && (
-              <>
-                <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-md transition-all duration-300">
-                  <div className="mb-4">
-                    <Counter end={5} suffix="+ MW" duration={3000} />
-                  </div>
-                  <p className="text-gray-600">Small wind systems installed across India</p>
-                </div>
-                <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-md transition-all duration-300">
-                  <div className="mb-4">
-                    <Counter end={15} suffix="+ yrs" duration={3000} />
-                  </div>
-                  <p className="text-gray-600">of experience</p>
-                </div>
-                <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-md transition-all duration-300">
-                  <div className="mb-4">
-                    <Counter end={100} suffix="%" duration={3000} />
-                  </div>
-                  <p className="text-gray-600">Proven expertise in integrating hybrid energy systems</p>
-                </div>
-              </>
-            )}
+        <div className="mt-16">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="p-8 md:p-12">
+              <h2 className="text-3xl font-bold text-center mb-12">Achievements and Expertise</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {isVisible && (
+                  <>
+                    <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="mb-6">
+                        <Counter end={5} suffix="+ MW" duration={3000} />
+                      </div>
+                      <p className="text-gray-600 font-medium">Small wind systems installed across India</p>
+                    </div>
+                    <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="mb-6">
+                        <Counter end={15} suffix="+ yrs" duration={3000} />
+                      </div>
+                      <p className="text-gray-600 font-medium">of experience</p>
+                    </div>
+                    <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="mb-6">
+                        <Counter end={100} suffix="%" duration={3000} />
+                      </div>
+                      <p className="text-gray-600 font-medium">Proven expertise in integrating hybrid energy systems</p>
+                    </div>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
