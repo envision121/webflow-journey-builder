@@ -30,7 +30,7 @@ const Counter = ({ end, duration = 2000, prefix = "", suffix = "" }) => {
   }, [end, duration]);
 
   return (
-    <span className="text-5xl font-bold text-[rgb(74,171,61)]">
+    <span className="text-6xl font-bold text-[rgb(74,171,61)]">
       {prefix}{count}{suffix}
     </span>
   );
@@ -124,34 +124,35 @@ const KeyHighlights = () => {
           ))}
         </div>
 
-        <div className="mt-16">
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-center mb-12">Achievements and Expertise</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                {isVisible && (
-                  <>
-                    <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="mb-6">
-                        <Counter end={5} suffix="+ MW" duration={3000} />
-                      </div>
-                      <p className="text-gray-600 font-medium">Small wind systems installed across India</p>
+        <div className="mt-20">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-16 text-[#1B4332]">Achievements and Expertise</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {isVisible && (
+                <>
+                  <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in">
+                    <div className="mb-6">
+                      <Counter end={5} suffix="+ MW" duration={3000} />
                     </div>
-                    <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="mb-6">
-                        <Counter end={15} suffix="+ yrs" duration={3000} />
-                      </div>
-                      <p className="text-gray-600 font-medium">of experience</p>
+                    <p className="text-gray-600 text-lg">Small wind systems installed across India</p>
+                    <div className="mt-6 h-1 w-full bg-[rgb(74,171,61)] rounded-full"></div>
+                  </div>
+                  <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                    <div className="mb-6">
+                      <Counter end={15} suffix="+ yrs" duration={3000} />
                     </div>
-                    <div className="text-center p-8 rounded-xl bg-gray-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                      <div className="mb-6">
-                        <Counter end={100} suffix="%" duration={3000} />
-                      </div>
-                      <p className="text-gray-600 font-medium">Proven expertise in integrating hybrid energy systems</p>
+                    <p className="text-gray-600 text-lg">of experience</p>
+                    <div className="mt-6 h-1 w-full bg-[rgb(74,171,61)] rounded-full"></div>
+                  </div>
+                  <div className="bg-white rounded-2xl shadow-lg p-10 transform hover:-translate-y-2 transition-all duration-300 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                    <div className="mb-6">
+                      <Counter end={100} suffix="%" duration={3000} />
                     </div>
-                  </>
-                )}
-              </div>
+                    <p className="text-gray-600 text-lg">Proven expertise in integrating hybrid energy systems and solar water pumps</p>
+                    <div className="mt-6 h-1 w-full bg-[rgb(74,171,61)] rounded-full"></div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
