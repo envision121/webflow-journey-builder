@@ -1,4 +1,5 @@
 import { Wind, Sun, Battery, Zap, ArrowRight } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Services = () => {
   console.log("Services.tsx - Rendering Services component");
@@ -49,22 +50,24 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-              <div className="relative p-8 bg-white hover:bg-transparent transition-colors duration-500 h-full flex flex-col">
-                <div className="mb-6 text-primary group-hover:text-white transition-colors duration-500">
-                  {service.icon}
+            <div key={index} className="flex">
+              <div className="group relative overflow-hidden rounded-2xl flex-grow">
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                <div className="relative p-8 bg-white hover:bg-transparent transition-colors duration-500 h-full flex flex-col">
+                  <div className="mb-6 text-primary group-hover:text-white transition-colors duration-500">
+                    {service.icon}
+                  </div>
+                  <h4 className="text-xl font-semibold mb-4 group-hover:text-white transition-colors duration-500">
+                    {service.title}
+                  </h4>
+                  <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-500">
+                    {service.description}
+                  </p>
                 </div>
-                <h4 className="text-xl font-semibold mb-4 group-hover:text-white transition-colors duration-500">
-                  {service.title}
-                </h4>
-                <p className="text-gray-600 group-hover:text-white/90 transition-colors duration-500">
-                  {service.description}
-                </p>
               </div>
+              {index < services.length - 1 && (
+                <Separator orientation="vertical" className="mx-4 h-full bg-gray-200" />
+              )}
             </div>
           ))}
         </div>
