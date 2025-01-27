@@ -1,7 +1,10 @@
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 
+console.log("Navbar.tsx - Starting render");
+
 const Navbar = () => {
+  console.log("Navbar.tsx - Inside Navbar component");
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -14,20 +17,20 @@ const Navbar = () => {
   ];
 
   return (
-    <>
-      <div className="bg-white py-2 border-b">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white">
+      <div className="bg-gray-100 py-2">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm text-gray-600">
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Ekkattuthangal, Guindy Chennai - 600 032</span>
+                <span className="hidden sm:inline">Ekkattuthangal, Guindy Chennai - 600 032</span>
               </div>
             </div>
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+91 9841210943 / +91 9884410943</span>
+                <span className="hidden sm:inline">+91 9841210943 / +91 9884410943</span>
               </div>
             </div>
           </div>
@@ -41,7 +44,6 @@ const Navbar = () => {
               <span className="text-xl font-bold text-primary font-rubik">Empee Green Energy</span>
             </a>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
                 <a
@@ -54,7 +56,6 @@ const Navbar = () => {
               ))}
             </div>
 
-            {/* Mobile Navigation Toggle */}
             <button
               className="md:hidden p-2 hover:bg-gray-100 rounded-lg"
               onClick={() => setIsOpen(!isOpen)}
@@ -64,7 +65,6 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Navigation Menu */}
           {isOpen && (
             <div className="md:hidden py-4 border-t">
               <div className="flex flex-col space-y-4">
@@ -83,7 +83,7 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-    </>
+    </header>
   );
 };
 

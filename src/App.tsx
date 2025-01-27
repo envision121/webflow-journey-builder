@@ -5,12 +5,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 
-console.log("App.tsx - Rendering App component");
+console.log("App.tsx - Starting application render");
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  console.log("App.tsx - Inside App component render");
+  console.log("App.tsx - Inside App component");
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>

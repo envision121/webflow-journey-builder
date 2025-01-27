@@ -11,23 +11,21 @@ import Footer from "@/components/Footer";
 console.log("Index.tsx - Starting render");
 
 const Index = () => {
-  console.log("Index.tsx - Inside Index component render");
+  console.log("Index.tsx - Inside Index component");
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main>
+      <main className="flex-grow">
         <Hero />
         <Mission />
-        <div className="bg-background">
-          <KeyHighlights />
-          <Services />
-          <Products />
-          <Gallery />
-          <CTA />
-        </div>
+        <KeyHighlights />
+        <Services />
+        <Products />
+        <Gallery />
+        <CTA />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 
