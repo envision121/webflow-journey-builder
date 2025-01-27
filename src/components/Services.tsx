@@ -9,25 +9,21 @@ const Services = () => {
       icon: <Wind className="w-12 h-12" />,
       title: "Wind Energy Systems",
       description: "Cutting-edge wind turbines and systems for optimal energy generation",
-      gradient: "from-blue-500/20 to-cyan-500/20",
     },
     {
       icon: <Sun className="w-12 h-12" />,
       title: "Solar Solutions",
       description: "Advanced solar panels and photovoltaic systems for sustainable power",
-      gradient: "from-orange-500/20 to-yellow-500/20",
     },
     {
       icon: <Battery className="w-12 h-12" />,
       title: "Hybrid Systems",
       description: "Integrated renewable energy solutions for uninterrupted power supply",
-      gradient: "from-green-500/20 to-emerald-500/20",
     },
     {
       icon: <Zap className="w-12 h-12" />,
       title: "Smart Grid Integration",
       description: "Intelligent power distribution and management systems",
-      gradient: "from-purple-500/20 to-pink-500/20",
     },
   ];
 
@@ -48,25 +44,22 @@ const Services = () => {
           </a>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
             <div key={index} className="flex">
-              <div className="group relative overflow-hidden rounded-2xl flex-grow">
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                <div className="relative p-8 bg-white hover:bg-transparent transition-colors duration-500 h-full flex flex-col">
-                  <div className="mb-6 text-primary group-hover:text-white transition-colors duration-500">
-                    {service.icon}
-                  </div>
-                  <h4 className="text-xl font-semibold mb-4 group-hover:text-white transition-colors duration-500">
-                    {service.title}
-                  </h4>
-                  <p className="text-sm text-gray-600 group-hover:text-white/90 transition-colors duration-500">
-                    {service.description}
-                  </p>
+              <div className="flex-grow">
+                <div className="text-[rgb(74,171,61)] mb-6">
+                  {service.icon}
                 </div>
+                <h4 className="text-xl font-semibold mb-4 text-[#2D3748]">
+                  {service.title}
+                </h4>
+                <p className="text-sm text-gray-600">
+                  {service.description}
+                </p>
               </div>
               {index < services.length - 1 && (
-                <Separator orientation="vertical" className="mx-4 h-full bg-gray-200" />
+                <Separator orientation="vertical" className="mx-8 h-full bg-gray-200" />
               )}
             </div>
           ))}
