@@ -1,10 +1,7 @@
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 
-console.log("Navbar.tsx - Starting render");
-
 const Navbar = () => {
-  console.log("Navbar.tsx - Inside Navbar component");
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -17,8 +14,8 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white">
-      <div className="bg-gray-100 py-2">
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="bg-white py-2 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center text-sm text-gray-600">
             <div className="flex items-center gap-6">
