@@ -46,20 +46,22 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="flex">
+            <div key={index} className="group relative flex">
               <div className="flex-grow">
-                <div className="text-[rgb(74,171,61)] mb-6">
+                <div className="text-[rgb(74,171,61)] mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                <h4 className="text-xl font-semibold mb-4 text-[#2D3748]">
+                <h4 className="text-xl font-semibold mb-3 text-[#2D3748]">
                   {service.title}
                 </h4>
-                <p className="text-sm text-gray-600">
+                <p className="text-[15px] leading-relaxed text-gray-600">
                   {service.description}
                 </p>
               </div>
               {index < services.length - 1 && (
-                <Separator orientation="vertical" className="mx-8 h-full bg-gray-200" />
+                <div className="absolute right-[-1rem] top-0 h-full">
+                  <Separator orientation="vertical" className="h-full bg-gray-200" />
+                </div>
               )}
             </div>
           ))}
