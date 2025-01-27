@@ -1,9 +1,12 @@
 import { Wind, Sun, Battery, Zap, ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { useState } from "react";
 
 const Services = () => {
   console.log("Services.tsx - Rendering Services component");
   
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const services = [
     {
       icon: <Wind className="w-12 h-12" />,
@@ -54,15 +57,10 @@ const Services = () => {
               <div 
                 className="flex-grow p-6 transition-all duration-300 rounded-lg cursor-pointer"
                 style={{ 
-                  backgroundColor: 'transparent',
-                  transition: 'background-color 0.3s ease'
+                  backgroundColor: hoveredIndex === index ? service.hoverColor : 'transparent'
                 }}
-                onMouseEnter={e => {
-                  (e.target as HTMLElement).style.backgroundColor = service.hoverColor;
-                }}
-                onMouseLeave={e => {
-                  (e.target as HTMLElement).style.backgroundColor = 'transparent';
-                }}
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
                 <div className="text-[rgb(74,171,61)] mb-6 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
