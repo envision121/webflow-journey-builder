@@ -40,7 +40,7 @@ const Services = () => {
           </h3>
           <a
             href="#contact"
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full inline-flex items-center group transition-all duration-300"
+            className="bg-[rgb(74,171,61)] hover:bg-[rgb(60,150,50)] text-white px-8 py-4 rounded-full inline-flex items-center group transition-all duration-300"
           >
             Discover Our Services
             <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
