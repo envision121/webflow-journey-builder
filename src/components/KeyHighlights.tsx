@@ -95,6 +95,35 @@ const KeyHighlights = () => {
     <section className="py-16 bg-[#F8FAF8]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <h2 className="text-2xl md:text-3xl font-semibold text-[#1B4332] mb-4">Key Solutions</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {solutions.map((solution, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <div className="flex flex-col items-start space-y-3">
+                {solution.icon}
+                <h3 className="text-lg font-medium">{solution.title}</h3>
+                <ul className="space-y-2">
+                  {solution.description.map((item, idx) => (
+                    <li key={idx} className="text-gray-600 text-sm">{item}</li>
+                  ))}
+                </ul>
+                <a
+                  href="#"
+                  className="text-[#4AAB3D] hover:text-[#3C9632] transition-colors inline-flex items-center group mt-2"
+                >
+                  Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-20 mb-12">
           <h2 className="text-2xl md:text-3xl font-semibold text-[#1B4332]">Achievements and Expertise</h2>
         </div>
         
@@ -126,31 +155,6 @@ const KeyHighlights = () => {
               </div>
             </>
           )}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {solutions.map((solution, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-            >
-              <div className="flex flex-col items-start space-y-3">
-                {solution.icon}
-                <h3 className="text-lg font-medium">{solution.title}</h3>
-                <ul className="space-y-2">
-                  {solution.description.map((item, idx) => (
-                    <li key={idx} className="text-gray-600 text-sm">{item}</li>
-                  ))}
-                </ul>
-                <a
-                  href="#"
-                  className="text-[#4AAB3D] hover:text-[#3C9632] transition-colors inline-flex items-center group mt-2"
-                >
-                  Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
