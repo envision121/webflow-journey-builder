@@ -48,7 +48,21 @@
     @apply text-[2.5rem] md:text-[3rem] font-bold leading-tight mb-6;
   }
 
-  .animate-fade-in {
-    @apply opacity-0 animate-fade-in;
+  /* Remove the circular dependency and use the animation directly */
+  .fade-in {
+    @apply opacity-0;
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
+/* Define the animation keyframes outside of the @layer */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
