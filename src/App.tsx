@@ -13,7 +13,7 @@ const App = () => (
       <div className="min-h-screen bg-background">
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/empee' : ''}>
           <Routes>
             <Route path="/" element={<Index />} />
           </Routes>
