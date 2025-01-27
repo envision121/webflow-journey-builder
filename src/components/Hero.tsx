@@ -8,21 +8,25 @@ const Hero = () => {
 
   const slides = [
     {
-      image: `${import.meta.env.BASE_URL}/lovable-uploads/60eb7af7-d873-47e6-bc2a-44c12fa25d90.png`,
+      image: "https://images.unsplash.com/photo-1497436072909-60f360e1d4b1",
       title: "Powering Tomorrow's World",
       description: "Innovative renewable energy solutions for a sustainable future",
       button1: "Get Started →",
       button2: "Learn More",
     },
     {
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276.jpg",
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276",
       title: "Clean Energy Revolution",
       description: "Leading the transition to renewable energy technologies",
+      button1: "Get Started →",
+      button2: "Learn More",
     },
     {
-      image: "https://images.unsplash.com/photo-1509390144018-eeef0cba1092.jpg",
+      image: "https://images.unsplash.com/photo-1509390144018-eeef0cba1092",
       title: "Sustainable Solutions",
       description: "Creating a greener future for generations to come",
+      button1: "Get Started →",
+      button2: "Learn More",
     },
   ];
 
@@ -50,7 +54,7 @@ const Hero = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="hero-overlay absolute inset-0 bg-gradient-to-b from-primary-light/5 to-transparent z-10" />
+          <div className="absolute inset-0 bg-black/50 z-10" />
           <img
             src={slide.image}
             alt={slide.title}
@@ -74,13 +78,13 @@ const Hero = () => {
                      style={{ animationDelay: "600ms", animationFillMode: "forwards" }}>
                   <a
                     href="#contact"
-                    className="hero-cta-primary bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full inline-flex items-center group transition-all duration-300"
+                    className="bg-white hover:bg-white/90 text-black px-8 py-4 rounded-full inline-flex items-center group transition-all duration-300"
                   >
                     {slide.button1}
                   </a>
                   <a
                     href="#about"
-                    className="hero-cta-secondary bg-accent hover:bg-accent/90 text-secondary-dark px-8 py-4 rounded-full transition-all duration-300"
+                    className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full transition-all duration-300"
                   >
                     {slide.button2}
                   </a>
@@ -104,7 +108,7 @@ const Hero = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "w-8 bg-primary" : "bg-white/50"
+                index === currentSlide ? "w-8 bg-white" : "bg-white/50"
               }`}
             />
           ))}
