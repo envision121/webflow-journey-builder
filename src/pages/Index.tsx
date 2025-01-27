@@ -13,9 +13,9 @@ console.log("Index.tsx - Starting render");
 const Index = () => {
   console.log("Index.tsx - Inside Index component");
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden w-full">
       <Navbar />
-      <main className="flex-grow pt-[120px]"> {/* Added padding-top to account for fixed navbar */}
+      <main className="flex-grow pt-[120px] w-full overflow-x-hidden"> {/* Added width and overflow control */}
         <Hero />
         <Mission />
         <KeyHighlights />
