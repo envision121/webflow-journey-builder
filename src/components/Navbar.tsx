@@ -13,6 +13,17 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const serviceItems = {
+    "Wind Energy Solutions": [
+      { label: "Wind System", href: "/services/wind-system" },
+      { label: "Solar System", href: "/services/solar-system" },
+      { label: "Hybrid System", href: "/services/hybrid-system" },
+      { label: "Solar Pump System", href: "/services/solar-pump-system" },
+      { label: "Exhaust Wind System", href: "/services/exhaust-wind-system" },
+      { label: "Aero Leaf Wind Turbines", href: "/services/aero-leaf-wind-turbines" },
+    ],
+  };
+
   const productItems = {
     "Wind System": [
       { label: "UE-6 650 Wind Turbine", href: "/products/ue-6-650" },
@@ -38,7 +49,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Services", href: "#", isDropdown: true },
+    { label: "Services", href: "#", isDropdown: true, items: serviceItems },
     { label: "Products", href: "#", isDropdown: true, items: productItems },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact Us", href: "/contact" },
@@ -138,13 +149,13 @@ const Navbar = () => {
                   </Link>
                 ))}
                 {Object.entries(productItems).map(([key, services]) => (
-                  <div key={key}>
+                  <div key={key} className="pl-4">
                     <span className="font-semibold">{key}</span>
                     {services.map((service) => (
                       <Link
                         key={service.href}
                         to={service.href}
-                        className="text-gray-600 hover:text-primary font-medium px-8 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
+                        className="text-gray-600 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins block"
                         onClick={() => setIsOpen(false)}
                       >
                         {service.label}
