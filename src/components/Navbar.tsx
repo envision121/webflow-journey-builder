@@ -8,9 +8,9 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Services", href: "/#services" },
-    { label: "Products", href: "/#products" },
-    { label: "Gallery", href: "/gallery" }, // Updated from /#gallery to /gallery
+    { label: "Services", href: "/services" }, // Removed hash
+    { label: "Products", href: "/products" }, // Removed hash
+    { label: "Gallery", href: "/gallery" },
     { label: "Contact Us", href: "/contact" },
   ];
 

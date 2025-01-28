@@ -47,7 +47,6 @@ const Gallery = () => {
       title: "Team Collaboration",
       url: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
     },
-    // Duplicate images to reach 16
     {
       id: 7,
       title: "Software Development 2",
@@ -101,17 +100,12 @@ const Gallery = () => {
   ];
 
   const { data: displayedImages = [], isLoading } = useQuery({
-    queryKey: ["gallery", page],
-    queryFn: () => {
-      // Simulate API call with pagination
-      const start = 0;
-      const end = page * imagesPerPage;
-      return Promise.resolve(images.slice(start, end));
-    },
+    queryKey: ["gallery"],
+    queryFn: () => Promise.resolve(images),
   });
 
   const handleLoadMore = () => {
-    setPage((prev) => prev + 1);
+    console.log("Loading more images...");
   };
 
   return (
@@ -149,7 +143,6 @@ const Gallery = () => {
             <div
               key={image.id}
               className="relative group cursor-pointer overflow-hidden rounded-lg"
-              onClick={() => setSelectedImage(image.url)}
             >
               <img
                 src={image.url}
@@ -166,47 +159,23 @@ const Gallery = () => {
         </div>
 
         {/* Load More Button */}
-        {displayedImages.length < images.length && (
-          <div className="flex justify-center mt-12">
-            <Button
-              onClick={handleLoadMore}
-              disabled={isLoading}
-              className="px-8 py-6"
-            >
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Loading...
-                </>
-              ) : (
-                "Load More"
-              )}
-            </Button>
-          </div>
-        )}
-      </div>
-
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <div className="relative max-w-7xl max-h-[90vh]">
-            <img
-              src={selectedImage}
-              alt="Enlarged view"
-              className="max-w-full max-h-[90vh] object-contain"
-            />
-            <button
-              className="absolute top-4 right-4 text-white text-xl hover:text-gray-300"
-              onClick={() => setSelectedImage(null)}
-            >
-              ✕
-            </button>
-          </div>
+        <div className="flex justify-center mt-12">
+          <Button
+            onClick={handleLoadMore}
+            disabled={isLoading}
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full"
+          >
+            {isLoading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Loading...
+              </>
+            ) : (
+              "Load More"
+            )}
+          </Button>
         </div>
-      )}
+      </div>
 
       <Footer />
     </div>
