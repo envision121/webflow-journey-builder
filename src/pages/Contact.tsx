@@ -20,8 +20,7 @@ const Contact = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section with exactly 70vh height */}
-        <div className="h-[70vh] relative w-full mt-[5rem]">
+        <div className="h-[70vh] relative w-full">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
@@ -94,7 +93,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map Section */}
         <div className="mt-16">
           <Map />
         </div>
