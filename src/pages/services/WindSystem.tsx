@@ -15,7 +15,6 @@ const WindSystem = () => {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
@@ -52,7 +51,6 @@ const WindSystem = () => {
             </div>
           </div>
 
-          {/* Achievements Section */}
           <div className="bg-gray-50 rounded-lg p-8 mb-16">
             <h2 className="text-3xl font-bold mb-8">Our Achievements in Small Wind Systems</h2>
             <p className="text-lg mb-8">
@@ -78,7 +76,6 @@ const WindSystem = () => {
             </div>
           </div>
 
-          {/* Why Choose Us Section */}
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Why Choose Us?</h2>
             <p className="text-lg text-gray-700">
