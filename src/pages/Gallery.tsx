@@ -12,9 +12,8 @@ interface GalleryImage {
 }
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [page, setPage] = useState(1);
-  const imagesPerPage = 16;
+  const imagesPerPage = 8;
 
   const images: GalleryImage[] = [
     {
@@ -100,12 +99,17 @@ const Gallery = () => {
   ];
 
   const { data: displayedImages = [], isLoading } = useQuery({
-    queryKey: ["gallery"],
-    queryFn: () => Promise.resolve(images),
+    queryKey: ["gallery", page],
+    queryFn: () => {
+      // Simulate API call with pagination
+      const start = 0;
+      const end = page * imagesPerPage;
+      return Promise.resolve(images.slice(start, end));
+    },
   });
 
   const handleLoadMore = () => {
-    console.log("Loading more images...");
+    setPage((prev) => prev + 1);
   };
 
   return (
@@ -159,22 +163,24 @@ const Gallery = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="flex justify-center mt-12">
-          <Button
-            onClick={handleLoadMore}
-            disabled={isLoading}
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full"
-          >
-            {isLoading ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Loading...
-              </>
-            ) : (
-              "Load More"
-            )}
-          </Button>
-        </div>
+        {displayedImages.length < images.length && (
+          <div className="flex justify-center mt-12">
+            <Button
+              onClick={handleLoadMore}
+              disabled={isLoading}
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full"
+            >
+              {isLoading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Loading...
+                </>
+              ) : (
+                "Load More"
+              )}
+            </Button>
+          </div>
+        )}
       </div>
 
       <Footer />
