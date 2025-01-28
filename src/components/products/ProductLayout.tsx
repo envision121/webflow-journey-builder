@@ -12,20 +12,25 @@ interface ProductLayoutProps {
   model: string;
   specifications: Specification[];
   children?: React.ReactNode;
+  imageUrl?: string;
 }
 
 const ProductLayout: React.FC<ProductLayoutProps> = ({
   title,
   model,
   specifications,
-  children
+  children,
+  imageUrl = "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80"
 }) => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-32 pb-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-8 text-gray-900">{title}</h1>
+          <div className="mb-8">
+            <h1 className="text-3xl font-bold mb-2 text-gray-900">{title}</h1>
+            <div className="h-1 w-20 bg-primary rounded animate-grow"></div>
+          </div>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="space-y-6">
@@ -53,6 +58,13 @@ const ProductLayout: React.FC<ProductLayoutProps> = ({
             </div>
             
             <div className="space-y-6">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                <img 
+                  src={imageUrl} 
+                  alt={title}
+                  className="w-full h-64 object-cover"
+                />
+              </div>
               {children}
             </div>
           </div>
