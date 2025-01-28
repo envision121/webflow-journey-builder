@@ -6,47 +6,37 @@ const About = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
-        <div className="relative h-[300px] bg-gray-900">
-          <div className="absolute inset-0 bg-black/60" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white">About Us</h1>
+        <div className="h-[300px] relative bg-gradient-to-r from-green-600 to-green-700">
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="container relative z-10 h-full flex flex-col justify-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              About Us
+            </h1>
+            <p className="text-white/90 text-lg max-w-2xl">
+              Learn about our commitment to renewable energy and sustainable solutions
+            </p>
           </div>
         </div>
         
-        <div className="container mx-auto px-4 py-16">
-          <nav className="mb-8">
-            <ol className="flex items-center space-x-2 text-sm">
-              <li><a href="/" className="text-primary hover:underline">Home</a></li>
-              <li><span className="text-gray-500">/</span></li>
-              <li><span className="text-gray-500">About Us</span></li>
-            </ol>
-          </nav>
-
-          <div className="prose prose-lg max-w-none">
+        <div className="container py-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-6">Our Story</h2>
             <p className="mb-6">
-              At Empe Green Energy p Ltd, we take pride as a leading name in the power solutions industry. With our extensive knowledge and expertise in the field, we are dedicated to providing reliable, innovative, and high-quality products that meet the diverse needs of our clientele. Whether it's Uninterruptible Power Supplies (UPS), DC-DC Converters, Inverters, Charge Regulators, VFD Drives, or other power conditioning and conversion equipment, we have you covered.
+              Empee Green Energy has been at the forefront of renewable energy solutions since our inception. We are dedicated to providing innovative and sustainable energy solutions that help businesses and communities reduce their carbon footprint while maintaining efficiency and reliability.
             </p>
             
+            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="mb-6">
-              Our commitment to excellence extends beyond product offerings. As your trusted partner, we strive to understand your unique requirements and provide tailored solutions that optimize efficiency, minimize downtime, and ensure uninterrupted power supply. Our team of seasoned professionals is always ready to assist you with expert advice, comprehensive support, and prompt service.
+              Our mission is to accelerate the world's transition to sustainable energy through innovative solutions and exceptional service. We strive to make renewable energy accessible, affordable, and reliable for everyone.
             </p>
-
-            <p className="mb-6">
-              By choosing Empe Green Energy p Ltd, you gain access to the full range of top-of-the-line products, backed by our unwavering dedication to customer satisfaction. Together, we enable businesses to thrive in an increasingly power-dependent world.
-            </p>
-
-            <p className="mb-10">
-              Experience the synergy of Empe Green Energy p Ltd, and unlock the true potential of power solutions. Contact us today to discover how we can meet your power requirements with reliability, expertise, and unrivalled customer service.
-            </p>
-
-            <h2 className="text-2xl font-bold mb-6">Our Solutions</h2>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Small Wind Turbines</li>
-              <li>Solar Systems</li>
-              <li>Exhaust Wind Turbine</li>
-              <li>Wind Solar Hybrid Systems</li>
-              <li>Wind Solar Hybrid Power Plants</li>
-              <li>Solar pumping Systems</li>
+            
+            <h2 className="text-3xl font-bold mb-6">Our Values</h2>
+            <ul className="list-disc pl-6 space-y-3">
+              <li>Sustainability First</li>
+              <li>Innovation & Excellence</li>
+              <li>Customer Satisfaction</li>
+              <li>Environmental Responsibility</li>
+              <li>Community Engagement</li>
             </ul>
           </div>
         </div>
