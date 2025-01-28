@@ -25,6 +25,8 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
+    { label: "Services", href: "#", isDropdown: true },
+    { label: "Products", href: "/products" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact Us", href: "/contact" },
   ];
@@ -60,34 +62,37 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <NavigationMenu>
                 <NavigationMenuList>
-                  {navItems.map((item) => (
-                    <NavigationMenuItem key={item.label}>
-                      <Link
-                        to={item.href}
-                        className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins px-4 py-2"
-                      >
-                        {item.label}
-                      </Link>
-                    </NavigationMenuItem>
-                  ))}
-                  <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins">
-                      Services
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <div className="grid gap-2 p-4 w-[400px]">
-                        {serviceItems.map((service) => (
-                          <Link
-                            key={service.href}
-                            to={service.href}
-                            className="block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
-                          >
-                            {service.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
+                  {navItems.map((item) => 
+                    item.isDropdown ? (
+                      <NavigationMenuItem key={item.label}>
+                        <NavigationMenuTrigger className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins">
+                          {item.label}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                          <div className="grid gap-2 p-4 w-[400px]">
+                            {serviceItems.map((service) => (
+                              <Link
+                                key={service.href}
+                                to={service.href}
+                                className="block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
+                              >
+                                {service.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </NavigationMenuContent>
+                      </NavigationMenuItem>
+                    ) : (
+                      <NavigationMenuItem key={item.label}>
+                        <Link
+                          to={item.href}
+                          className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins px-4 py-2"
+                        >
+                          {item.label}
+                        </Link>
+                      </NavigationMenuItem>
+                    )
+                  )}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -114,7 +119,6 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                 ))}
-                <div className="px-4 py-2 font-medium text-gray-700">Services</div>
                 {serviceItems.map((service) => (
                   <Link
                     key={service.href}
