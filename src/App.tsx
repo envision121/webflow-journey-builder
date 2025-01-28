@@ -10,6 +10,7 @@ import HybridSystem from "@/pages/services/HybridSystem";
 import SolarPumpSystem from "@/pages/services/SolarPumpSystem";
 import ExhaustWindSystem from "@/pages/services/ExhaustWindSystem";
 import AeroLeafWindTurbines from "@/pages/services/AeroLeafWindTurbines";
+import UE6650 from "@/pages/products/ue-6-650";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/services/solar-pump-system" element={<SolarPumpSystem />} />
           <Route path="/services/exhaust-wind-system" element={<ExhaustWindSystem />} />
           <Route path="/services/aero-leaf-wind-turbines" element={<AeroLeafWindTurbines />} />
+          <Route path="/products/ue-6-650" element={<UE6650 />} />
+          {/* Add other product routes here */}
         </Routes>
       </Router>
     </QueryClientProvider>

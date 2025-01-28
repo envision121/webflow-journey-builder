@@ -13,20 +13,33 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const serviceItems = [
-    { label: "Wind System", href: "/services/wind-system" },
-    { label: "Solar System", href: "/services/solar-system" },
-    { label: "Hybrid System", href: "/services/hybrid-system" },
-    { label: "Solar Pump System", href: "/services/solar-pump-system" },
-    { label: "Exhaust Wind System", href: "/services/exhaust-wind-system" },
-    { label: "Aero Leaf Wind Turbines", href: "/services/aero-leaf-wind-turbines" },
-  ];
+  const productItems = {
+    "Wind System": [
+      { label: "UE-6 650 Wind Turbine", href: "/products/ue-6-650" },
+      { label: "UE-15 1.5KW Wind Turbine", href: "/products/ue-15-1-5kw" },
+      { label: "UE-15 Plus 1.8KW Wind Turbine", href: "/products/ue-15-plus-1-8kw" },
+      { label: "UE-33 3.3KW Wind Turbine", href: "/products/ue-33-3-3kw" },
+      { label: "UE-42 4.2KW Wind Turbine", href: "/products/ue-42-4-2kw" },
+      { label: "UE-42 Plus 5.1KW Wind Turbine", href: "/products/ue-42-plus-5-1kw" },
+    ],
+    "Exhaust Wind Turbine": [
+      { label: "UE-22 Plus Wind Turbine", href: "/products/ue-22-plus" },
+    ],
+    "Aero Leaf Wind Turbine": [
+      { label: "Wind Flower 3A-900 W", href: "/products/wind-flower-3a" },
+      { label: "Wind Bush 12 A-3.6KW", href: "/products/wind-bush-12a" },
+      { label: "Wind Palm 18A – 5.4KW", href: "/products/wind-palm-18a" },
+      { label: "Wind Palm 24A – 7.2KW", href: "/products/wind-palm-24a" },
+      { label: "Wind Palm 30A – 9KW", href: "/products/wind-palm-30a" },
+      { label: "Wind Tree 36A – 10.8KW", href: "/products/wind-tree-36a" },
+    ],
+  };
 
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
     { label: "Services", href: "#", isDropdown: true },
-    { label: "Products", href: "/products" },
+    { label: "Products", href: "#", isDropdown: true, items: productItems },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact Us", href: "/contact" },
   ];
@@ -70,14 +83,19 @@ const Navbar = () => {
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
                           <div className="grid gap-2 p-4 w-[400px]">
-                            {serviceItems.map((service) => (
-                              <Link
-                                key={service.href}
-                                to={service.href}
-                                className="block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
-                              >
-                                {service.label}
-                              </Link>
+                            {item.items && Object.entries(item.items).map(([key, services]) => (
+                              <div key={key}>
+                                <h3 className="font-semibold">{key}</h3>
+                                {services.map((service) => (
+                                  <Link
+                                    key={service.href}
+                                    to={service.href}
+                                    className="block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
+                                  >
+                                    {service.label}
+                                  </Link>
+                                ))}
+                              </div>
                             ))}
                           </div>
                         </NavigationMenuContent>
@@ -119,15 +137,20 @@ const Navbar = () => {
                     {item.label}
                   </Link>
                 ))}
-                {serviceItems.map((service) => (
-                  <Link
-                    key={service.href}
-                    to={service.href}
-                    className="text-gray-600 hover:text-primary font-medium px-8 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {service.label}
-                  </Link>
+                {Object.entries(productItems).map(([key, services]) => (
+                  <div key={key}>
+                    <span className="font-semibold">{key}</span>
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        to={service.href}
+                        className="text-gray-600 hover:text-primary font-medium px-8 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
                 ))}
               </div>
             </div>
