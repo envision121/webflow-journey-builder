@@ -15,9 +15,9 @@ const About = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow pt-[80px]"> {/* Add padding-top to account for fixed navbar */}
-        {/* Hero Section with proper height and positioning */}
-        <div className="relative h-[400px] w-full">
+      <main className="flex-grow pt-[80px]">
+        {/* Hero Section with 70vh height */}
+        <div className="relative h-[70vh] w-full">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 

@@ -14,7 +14,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
   };
 
@@ -22,8 +21,8 @@ const Contact = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-20">
-        {/* Hero Section */}
-        <div className="relative h-[400px] w-full">
+        {/* Hero Section with 70vh height */}
+        <div className="relative h-[70vh] w-full">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
@@ -42,7 +41,6 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Information and Form Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
