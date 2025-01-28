@@ -24,9 +24,9 @@ const About = () => {
             }}
           >
             <div className="absolute inset-0 bg-black/60" />
-            <div className="relative h-full flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center">
               <div className="container mx-auto px-4">
-                <div className="max-w-2xl">
+                <div className="max-w-2xl mx-auto text-center">
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     About Us
                   </h1>
