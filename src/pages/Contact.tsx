@@ -22,12 +22,12 @@ const Contact = () => {
       <main className="flex-grow">
         <div className="h-[70vh] relative w-full">
           <div 
-            className="absolute inset-0 bg-cover bg-center flex items-center"
+            className="absolute inset-0 bg-cover bg-center"
             style={{ 
               backgroundImage: "url('/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png')"
             }}
           >
-            <div className="absolute inset-0 bg-black/60 flex items-center">
+            <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
               <div className="container mx-auto px-4">
                 <div className="text-center">
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
