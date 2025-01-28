@@ -98,13 +98,14 @@ const Gallery = () => {
     },
   ];
 
-  const { data: displayedImages = [], isLoading } = useQuery({
+  const { data: displayedImages = [], isLoading, isFetching } = useQuery({
     queryKey: ["gallery", page],
-    queryFn: () => {
-      // Simulate API call with pagination
+    queryFn: async () => {
+      // Simulate API call with pagination and loading delay
+      await new Promise(resolve => setTimeout(resolve, 800)); // Add slight delay for smooth loading
       const start = 0;
       const end = page * imagesPerPage;
-      return Promise.resolve(images.slice(start, end));
+      return images.slice(start, end);
     },
   });
 
@@ -146,7 +147,7 @@ const Gallery = () => {
           {displayedImages.map((image) => (
             <div
               key={image.id}
-              className="relative group cursor-pointer overflow-hidden rounded-lg"
+              className="relative group cursor-pointer overflow-hidden rounded-lg animate-fade-in"
             >
               <img
                 src={image.url}
@@ -167,14 +168,14 @@ const Gallery = () => {
           <div className="flex justify-center mt-12">
             <Button
               onClick={handleLoadMore}
-              disabled={isLoading}
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full"
+              disabled={isLoading || isFetching}
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full transition-all duration-300 disabled:opacity-70"
             >
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Loading...
-                </>
+              {(isLoading || isFetching) ? (
+                <div className="flex items-center gap-2">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  <span>Loading...</span>
+                </div>
               ) : (
                 "Load More"
               )}
