@@ -1,16 +1,17 @@
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: "Home", href: "#" },
-    { label: "About Us", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Products", href: "#products" },
-    { label: "Gallery", href: "#gallery" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about" },
+    { label: "Services", href: "/#services" },
+    { label: "Products", href: "/#products" },
+    { label: "Gallery", href: "/#gallery" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -36,20 +37,30 @@ const Navbar = () => {
       <nav className="bg-white shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <a href="#" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <img src="/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png" alt="Logo" className="h-12 w-auto" />
               <span className="text-xl font-bold text-primary font-rubik">Empee Green Energy</span>
-            </a>
+            </Link>
 
             <div className="hidden md:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins"
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith("/#") ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins"
+                  >
+                    {item.label}
+                  </Link>
+                )
               ))}
             </div>
 
@@ -66,14 +77,25 @@ const Navbar = () => {
             <div className="md:hidden py-4 border-t">
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="text-gray-700 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </a>
+                  item.href.startsWith("/#") ? (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      className="text-gray-700 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      className="text-gray-700 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
