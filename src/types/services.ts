@@ -4,4 +4,5 @@ export interface ServicePageProps {
   features: string[];
   benefits: string[];
   imageUrl: string;
+  children?: React.ReactNode;
 }
