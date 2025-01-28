@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
 import { Loader2 } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 interface GalleryImage {
   id: number;
@@ -113,9 +115,11 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
       {/* Hero Section */}
-      <div className="relative h-[40vh]">
+      <div className="relative h-[40vh] mt-[104px]">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -139,7 +143,7 @@ const Gallery = () => {
       </div>
 
       {/* Gallery Grid */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16 flex-grow">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {displayedImages.map((image) => (
             <div
@@ -167,7 +171,7 @@ const Gallery = () => {
             <Button
               onClick={handleLoadMore}
               disabled={isLoading}
-              className="px-8 py-4"
+              className="px-8 py-6"
             >
               {isLoading ? (
                 <>
@@ -203,6 +207,8 @@ const Gallery = () => {
           </div>
         </div>
       )}
+
+      <Footer />
     </div>
   );
 };
