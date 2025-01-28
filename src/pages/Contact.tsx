@@ -27,8 +27,8 @@ const Contact = () => {
               backgroundImage: "url('/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png')"
             }}
           >
-            <div className="absolute inset-0 bg-black/60 flex">
-              <div className="container mx-auto px-4 flex items-center">
+            <div className="absolute inset-0 bg-black/60 flex items-center">
+              <div className="container mx-auto px-4">
                 <div className="text-left">
                   <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                     Contact Us
