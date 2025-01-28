@@ -15,9 +15,9 @@ const About = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <div className="relative h-[300px]">
+      <main className="flex-grow pt-[80px]"> {/* Add padding-top to account for fixed navbar */}
+        {/* Hero Section with proper height and positioning */}
+        <div className="relative h-[400px] w-full">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
@@ -38,10 +38,10 @@ const About = () => {
         
         {/* Main Content Section */}
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="max-w-4xl mx-auto space-y-16">
             {/* Introduction */}
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+            <div className="space-y-8">
+              <h2 className="text-3xl font-bold text-gray-900">
                 Welcome to Empee Green Energy Pvt Ltd
               </h2>
               
