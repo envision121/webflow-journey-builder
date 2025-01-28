@@ -16,8 +16,7 @@ const About = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section with 70vh height */}
-        <div className="relative h-[70vh] w-full mt-20">
+        <div className="h-[70vh] relative w-full">
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
@@ -25,13 +24,17 @@ const About = () => {
             }}
           >
             <div className="absolute inset-0 bg-black/60" />
-            <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                About Us
-              </h1>
-              <p className="text-white/90 text-lg max-w-2xl">
-                Leading the way in sustainable energy solutions
-              </p>
+            <div className="relative h-full flex items-center justify-center">
+              <div className="container mx-auto px-4">
+                <div className="max-w-2xl">
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    About Us
+                  </h1>
+                  <p className="text-white/90 text-lg">
+                    Leading the way in sustainable energy solutions
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

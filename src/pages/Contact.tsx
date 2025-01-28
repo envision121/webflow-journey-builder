@@ -28,14 +28,16 @@ const Contact = () => {
             }}
           >
             <div className="absolute inset-0 bg-black/60" />
-            <div className="relative h-full flex items-center">
+            <div className="relative h-full flex items-center justify-center">
               <div className="container mx-auto px-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  Contact Us
-                </h1>
-                <p className="text-white/90 text-lg max-w-2xl">
-                  Get in touch with our team
-                </p>
+                <div className="max-w-2xl">
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    Contact Us
+                  </h1>
+                  <p className="text-white/90 text-lg">
+                    Get in touch with our team
+                  </p>
+                </div>
               </div>
             </div>
           </div>
