@@ -1,15 +1,30 @@
 import { Menu, X, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const serviceItems = [
+    { label: "Wind System", href: "/services/wind-system" },
+    { label: "Solar System", href: "/services/solar-system" },
+    { label: "Hybrid System", href: "/services/hybrid-system" },
+    { label: "Solar Pump System", href: "/services/solar-pump-system" },
+    { label: "Exhaust Wind System", href: "/services/exhaust-wind-system" },
+    { label: "Aero Leaf Wind Turbines", href: "/services/aero-leaf-wind-turbines" },
+  ];
+
   const navItems = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Services", href: "/services" }, // Removed hash
-    { label: "Products", href: "/products" }, // Removed hash
     { label: "Gallery", href: "/gallery" },
     { label: "Contact Us", href: "/contact" },
   ];
@@ -43,25 +58,38 @@ const Navbar = () => {
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
-              {navItems.map((item) => (
-                item.href.startsWith("/#") ? (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins"
-                  >
-                    {item.label}
-                  </Link>
-                )
-              ))}
+              <NavigationMenu>
+                <NavigationMenuList>
+                  {navItems.map((item) => (
+                    <NavigationMenuItem key={item.label}>
+                      <Link
+                        to={item.href}
+                        className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins px-4 py-2"
+                      >
+                        {item.label}
+                      </Link>
+                    </NavigationMenuItem>
+                  ))}
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="text-gray-700 hover:text-primary font-medium transition-colors duration-200 font-poppins">
+                      Services
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <div className="grid gap-2 p-4 w-[400px]">
+                        {serviceItems.map((service) => (
+                          <Link
+                            key={service.href}
+                            to={service.href}
+                            className="block px-4 py-2 hover:bg-gray-100 rounded-md transition-colors duration-200"
+                          >
+                            {service.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
             </div>
 
             <button
@@ -77,25 +105,25 @@ const Navbar = () => {
             <div className="md:hidden py-4 border-t">
               <div className="flex flex-col space-y-4">
                 {navItems.map((item) => (
-                  item.href.startsWith("/#") ? (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      className="text-gray-700 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </a>
-                  ) : (
-                    <Link
-                      key={item.label}
-                      to={item.href}
-                      className="text-gray-700 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  )
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="text-gray-700 hover:text-primary font-medium px-4 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="px-4 py-2 font-medium text-gray-700">Services</div>
+                {serviceItems.map((service) => (
+                  <Link
+                    key={service.href}
+                    to={service.href}
+                    className="text-gray-600 hover:text-primary font-medium px-8 py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 font-poppins"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {service.label}
+                  </Link>
                 ))}
               </div>
             </div>
