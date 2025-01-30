@@ -46,7 +46,7 @@ const AeroLeafWindTurbines = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/01019e3f-d3eb-4f9f-84f9-8d8424f8ee43.png" 
+                src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" 
                 alt="Aero Leaf Wind Turbine" 
                 className="w-full h-[500px] object-cover"
               />

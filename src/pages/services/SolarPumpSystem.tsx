@@ -47,7 +47,7 @@ const SolarPumpSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/cfef3c90-fe62-4b22-bee1-d588a559fb08.png" 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                 alt="Solar Pump System" 
                 className="w-full h-[500px] object-cover"
               />

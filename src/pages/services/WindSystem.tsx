@@ -44,7 +44,7 @@ const WindSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="/lovable-uploads/0f54b070-79a3-4fea-997c-ec269190395f.png" 
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b" 
                 alt="Wind System" 
                 className="w-full h-[500px] object-cover"
               />
