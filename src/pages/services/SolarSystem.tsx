@@ -49,7 +49,7 @@ const SolarSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1509391366360-2e959784a276" 
+                src="/lovable-uploads/5f06c520-cd37-4c0d-8a2a-1d0ae906112c.png" 
                 alt="Solar System" 
                 className="w-full h-[500px] object-cover"
               />

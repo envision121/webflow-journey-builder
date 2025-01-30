@@ -32,6 +32,10 @@ const Navbar = () => {
       { label: "UE-33 3.3KW Wind Turbine", href: "/products/ue-33-3-3kw" },
       { label: "UE-42 4.2KW Wind Turbine", href: "/products/ue-42-4-2kw" },
       { label: "UE-42 Plus 5.1KW Wind Turbine", href: "/products/ue-42-plus-5-1kw" },
+      { label: "UE-22 Plus Wind Turbine", href: "/products/ue-22-plus" },
+      { label: "Wind Flower 3A-900 W", href: "/products/wind-flower-3a" },
+      { label: "Wind Palm 18A – 5.4KW", href: "/products/wind-palm-18a" },
+      { label: "Wind Bush 12 A-3.6KW", href: "/products/wind-bush-12a" },
     ],
     "Exhaust Wind Turbine": [
       { label: "UE-22 Plus Wind Turbine", href: "/products/ue-22-plus" },

@@ -47,7 +47,7 @@ const HybridSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
+                src="/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png" 
                 alt="Hybrid System" 
                 className="w-full h-[500px] object-cover"
               />

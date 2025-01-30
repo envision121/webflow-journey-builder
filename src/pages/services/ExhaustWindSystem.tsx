@@ -47,7 +47,7 @@ const ExhaustWindSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc" 
+                src="/lovable-uploads/60a902db-a0bf-43ce-b51a-9a624408af9e.png" 
                 alt="Exhaust Wind System" 
                 className="w-full h-[500px] object-cover"
               />
