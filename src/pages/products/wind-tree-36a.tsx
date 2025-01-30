@@ -15,6 +15,7 @@ const WindTree36A = () => {
       title="Wind Tree 36A – 10.8KW"
       model="Wind Tree 36A"
       specifications={specifications}
+      imageUrl="/lovable-uploads/cfef3c90-fe62-4b22-bee1-d588a559fb08.png"
     >
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold mb-4">Product Overview</h2>

@@ -43,6 +43,7 @@ const UE151500 = () => {
       title="UE-15 1.5KW Wind Turbine"
       model="UE-15"
       specifications={specifications}
+      imageUrl="/lovable-uploads/a3e68f8e-bdd1-4705-8a24-ffc1db553378.png"
     >
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold mb-4">Product Overview</h2>

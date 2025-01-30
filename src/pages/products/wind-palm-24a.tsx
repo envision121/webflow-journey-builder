@@ -15,6 +15,7 @@ const WindPalm24A = () => {
       title="Wind Palm 24A – 7.2KW"
       model="Wind Palm 24A"
       specifications={specifications}
+      imageUrl="/lovable-uploads/0f54b070-79a3-4fea-997c-ec269190395f.png"
     >
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold mb-4">Product Overview</h2>

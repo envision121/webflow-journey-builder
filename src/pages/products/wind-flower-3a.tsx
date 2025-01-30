@@ -15,6 +15,7 @@ const WindFlower3A = () => {
       title="Wind Flower 3A-900 W"
       model="Wind Flower 3A"
       specifications={specifications}
+      imageUrl="/lovable-uploads/01019e3f-d3eb-4f9f-84f9-8d8424f8ee43.png"
     >
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold mb-4">Product Overview</h2>
