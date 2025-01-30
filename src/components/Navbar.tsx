@@ -78,9 +78,8 @@ const Navbar = () => {
       <nav className="bg-white shadow-sm">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center">
               <img src="/lovable-uploads/1e7f26a0-6333-4f0a-bb57-c07de8b994ce.png" alt="Logo" className="h-16 w-auto" />
-              <span className="text-xl font-bold text-primary font-rubik">Empee Green Energy</span>
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
