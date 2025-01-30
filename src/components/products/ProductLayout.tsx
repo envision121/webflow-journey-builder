@@ -62,7 +62,7 @@ const ProductLayout: React.FC<ProductLayoutProps> = ({
                 <img 
                   src={imageUrl} 
                   alt={title}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-[500px] object-contain bg-white p-4"
                 />
               </div>
               {children}
