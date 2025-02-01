@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { Award, Leaf, Settings, Wind } from "lucide-react";
-=======
-import { Leaf, Settings, Award, Wind } from "lucide-react";
+import { Wind, Leaf, Settings, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const AeroLeafWindTurbines = () => {
   return (
@@ -15,8 +9,8 @@ const AeroLeafWindTurbines = () => {
       <main className="flex-grow pt-32">
         <div className="bg-gradient-to-r from-[#1A3C2F] to-[#2A5C4F] text-white py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Aero Leaf Wind Turbine</h1>
-            <p className="text-xl mb-8">Nature-Inspired Design for Efficient Energy Generation</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">AeroLeaf Wind Turbines</h1>
+            <p className="text-xl mb-8">Innovative Vertical Axis Wind Energy Solutions</p>
           </div>
         </div>
 
@@ -24,69 +18,64 @@ const AeroLeafWindTurbines = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-lg text-gray-700 mb-8">
-                The Aero Leaf Wind Turbine combines cutting-edge technology with a sleek, nature-inspired 
-                design to generate clean energy efficiently. Its compact and modern build makes it ideal 
-                for both urban and rural installations, providing sustainable power in any setting.
+                AeroLeaf wind turbines are designed to harness wind energy efficiently, 
+                providing a sustainable solution for both residential and commercial applications. 
+                Their unique vertical axis design allows for optimal performance in varying wind conditions.
               </p>
               <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6">Key Features</h2>
+                <h2 className="text-2xl font-bold mb-6">Features of AeroLeaf Wind Turbines</h2>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <Leaf className="text-primary mt-1 flex-shrink-0" />
-                    <span>Compact Design: Perfect for residential, commercial, and small-scale industrial use.</span>
+                    <Wind className="text-primary mt-1 flex-shrink-0" />
+                    <span>High Efficiency: Designed to capture wind energy effectively, even in low wind conditions.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Wind className="text-primary mt-1 flex-shrink-0" />
-                    <span>High Efficiency: Captures even low wind speeds to ensure constant energy output.</span>
+                    <Leaf className="text-primary mt-1 flex-shrink-0" />
+                    <span>Eco-Friendly: Contributes to reducing carbon footprint and promoting renewable energy.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Settings className="text-primary mt-1 flex-shrink-0" />
-                    <span>Durable Construction: Built with high-quality materials to withstand extreme weather conditions.</span>
+                    <span>Low Maintenance: Built with durable materials, requiring minimal upkeep.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Award className="text-primary mt-1 flex-shrink-0" />
-                    <span>Low Noise: Operates silently, making it suitable for noise-sensitive areas.</span>
+                    <span>Versatile Applications: Suitable for urban, rural, and remote locations.</span>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-<<<<<<< HEAD
-                src="../../public/images/ad9ccc0c-264b-44e0-8d46-80f7a282483a.jpg" 
-=======
-                src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" 
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
-                alt="Aero Leaf Wind Turbine" 
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276" 
+                alt="AeroLeaf Wind Turbines" 
                 className="w-full h-[500px] object-cover"
               />
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-8">Why Choose Aero Leaf Wind Turbine?</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <Leaf className="text-primary w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Sustainability</h3>
-                <p>Reduce your carbon footprint with a clean energy solution.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <Award className="text-primary w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Cost Savings</h3>
-                <p>Lower electricity bills and enjoy long-term savings.</p>
-              </div>
+          <div className="bg-gray-50 rounded-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold mb-8">Our Commitment to Quality</h2>
+            <p className="text-lg mb-8">
+              We are dedicated to providing high-quality wind energy solutions that meet the needs of our customers. 
+              Our AeroLeaf wind turbines are engineered for performance and reliability, ensuring long-term benefits.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Wind className="text-primary w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Adaptability</h3>
-                <p>Designed for diverse environments, from urban rooftops to rural landscapes.</p>
+                <p>Expert installation and support for optimal performance.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Settings className="text-primary w-12 h-12 mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Custom Solutions</h3>
-                <p>We tailor our turbines to meet specific energy requirements.</p>
+                <p>Comprehensive maintenance services to ensure longevity.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Award className="text-primary w-12 h-12 mb-4" />
+                <p>Recognized for excellence in renewable energy solutions.</p>
               </div>
             </div>
+            <p className="text-lg mt-8 text-center">
+              Choose AeroLeaf wind turbines for a sustainable and efficient energy solution.
+            </p>
           </div>
         </div>
       </main>

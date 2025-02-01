@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import { Award, Leaf, Settings, Wind } from "lucide-react";
-=======
-import { Wind, Settings, Award, Leaf } from "lucide-react";
+import { Wind, Zap, Settings, Award } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const ExhaustWindSystem = () => {
   return (
@@ -15,8 +9,8 @@ const ExhaustWindSystem = () => {
       <main className="flex-grow pt-32">
         <div className="bg-gradient-to-r from-[#1A3C2F] to-[#2A5C4F] text-white py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Exhaust Wind Turbines</h1>
-            <p className="text-xl mb-8">Capturing Energy from Industrial Blowers and Exhaust</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Exhaust Wind Systems</h1>
+            <p className="text-xl mb-8">Converting Waste Air into Clean Energy</p>
           </div>
         </div>
 
@@ -24,69 +18,52 @@ const ExhaustWindSystem = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-lg text-gray-700 mb-8">
-                Exhaust wind turbines are an innovative solution that harnesses energy from industrial 
-                blowers and exhaust systems to generate power. By utilizing waste energy from exhaust 
-                airflow, these systems provide an additional source of clean electricity for industrial 
-                and commercial operations.
+                Exhaust wind systems are designed to harness the energy from waste air, converting it into usable power. 
+                These systems are ideal for industrial applications where excess heat and air can be utilized effectively.
               </p>
               <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold mb-6">Features of Exhaust Wind Turbines</h2>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <Wind className="text-primary mt-1 flex-shrink-0" />
-                    <span>Waste Energy Utilization: Converts excess airflow from industrial exhausts and blowers into usable electrical energy.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Settings className="text-primary mt-1 flex-shrink-0" />
-                    <span>Cost-Effective Solution: Reduces energy costs by generating power from existing industrial processes.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Award className="text-primary mt-1 flex-shrink-0" />
-                    <span>Compact and Efficient Design: Easily integrated into existing systems without major infrastructure changes.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Leaf className="text-primary mt-1 flex-shrink-0" />
-                    <span>Sustainable Power Generation: Enhances energy efficiency and supports green energy initiatives.</span>
-                  </li>
-                </ul>
+                <h2 className="text-2xl font-bold mb-6">How Exhaust Wind Systems Work</h2>
+                <p>
+                  The system captures waste air from industrial processes and uses it to drive turbines, generating electricity 
+                  while reducing overall energy consumption. This innovative approach not only saves costs but also contributes 
+                  to a greener environment.
+                </p>
               </div>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
-<<<<<<< HEAD
-                src="../../public/images/3fbb03a4-1fb8-4ec9-9de1-1f8664f3560a.jpg" 
-=======
-                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc" 
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+                src="https://images.unsplash.com/photo-1509391366360-2e959784a276" 
                 alt="Exhaust Wind System" 
                 className="w-full h-[500px] object-cover"
               />
             </div>
           </div>
 
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-3xl font-bold mb-8">Our Expertise in Exhaust Wind Turbine Systems</h2>
-            <p className="text-lg mb-8">
-              We specialize in designing and implementing exhaust wind turbines for industrial and 
-              commercial applications. Our achievements include:
-            </p>
+          <div className="bg-gray-50 rounded-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold mb-8">Key Benefits of Exhaust Wind Systems</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Wind className="text-primary w-12 h-12 mb-4" />
-                <p>Successfully harnessing exhaust energy to provide sustainable and cost-efficient power.</p>
+                <h3 className="text-xl font-semibold mb-3">Sustainable Energy Source</h3>
+                <p>Utilizes waste air to generate clean energy, reducing reliance on fossil fuels.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <Zap className="text-primary w-12 h-12 mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Cost-Effective</h3>
+                <p>Reduces energy costs by harnessing energy that would otherwise be wasted.</p>
               </div>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <Settings className="text-primary w-12 h-12 mb-4" />
-                <p>Offering customized solutions to meet specific industrial requirements.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <Award className="text-primary w-12 h-12 mb-4" />
-                <p>Ensuring turnkey installations with comprehensive design, supply, and maintenance services.</p>
+                <h3 className="text-xl font-semibold mb-3">Low Maintenance</h3>
+                <p>Designed for durability and efficiency, requiring minimal upkeep.</p>
               </div>
             </div>
-            <p className="text-lg mt-8 text-center">
-              Our exhaust wind turbine systems deliver an effective and reliable method to maximize 
-              energy recovery while contributing to a cleaner and greener future.
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h2 className="text-3xl font-bold mb-8 text-center">Who We Are</h2>
+            <p className="text-lg text-gray-700 mb-8 text-center">
+              We specialize in innovative energy solutions, providing exhaust wind systems tailored to meet diverse industrial needs.
             </p>
           </div>
         </div>
