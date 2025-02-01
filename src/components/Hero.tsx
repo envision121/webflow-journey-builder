@@ -1,44 +1,26 @@
-<<<<<<< HEAD
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useEffect, useState } from "react";
-=======
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-<<<<<<< HEAD
-      image: "../../public/images/ben-white-gEKMstKfZ6w-unsplash.jpg",
-=======
-      image: "/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/ben-white-gEKMstKfZ6w-unsplash.jpg",
       title: "Powering Tomorrow's World",
       description: "Innovative renewable energy solutions for a sustainable future",
       button1: "Contact Us",
       button2: "View Products",
     },
     {
-<<<<<<< HEAD
-      image: "../../public/images/cf266cb9-9a8a-4bb9-8fc7-9d60bfe982b9.jpg",
-=======
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/cf266cb9-9a8a-4bb9-8fc7-9d60bfe982b9.jpg",
       title: "Clean Energy Revolution",
       description: "Leading the transition to renewable energy technologies",
       button1: "Contact Us",
       button2: "View Products",
     },
     {
-<<<<<<< HEAD
-      image: "../../public/images/f413a6be-6348-4f9a-a590-91f10f0fda90.jpg",
-      // image: "E:\Project\JavaScript\webflow-journey-builder-main\webflow-journey-builder-main\public\images\f413a6be-6348-4f9a-a590-91f10f0fda90.jpg",
-=======
-      image: "https://images.unsplash.com/photo-1509390144018-eeef0cba1092",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/f413a6be-6348-4f9a-a590-91f10f0fda90.jpg",
       title: "Sustainable Solutions",
       description: "Creating a greener future for generations to come",
       button1: "Contact Us",
