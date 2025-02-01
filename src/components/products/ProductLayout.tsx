@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import React from "react";
+=======
+import React from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 interface Specification {
   parameter: string;

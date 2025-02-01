@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Award, CheckCircle2, Settings, Wind } from "lucide-react";
+=======
+import { Wind, CheckCircle2, Award, Settings } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const WindSystem = () => {
   return (
@@ -44,7 +50,11 @@ const WindSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
+<<<<<<< HEAD
                 src="../../public/images/wind.jpg" 
+=======
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b" 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                 alt="Wind System" 
                 className="w-full h-[500px] object-cover"
               />

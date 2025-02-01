@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Map from "@/components/Map";
 import Navbar from "@/components/Navbar";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+=======
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Map from "@/components/Map";
+import { Mail, Phone, MapPin } from "lucide-react";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,10 +29,17 @@ const Contact = () => {
       <Navbar />
       <main className="flex-grow">
         <div className="h-[70vh] relative w-full">
+<<<<<<< HEAD
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: "url('../../public/images/4a1f7656-c373-4f2a-82df-88003f95a553.jpg')"
+=======
+          <div 
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ 
+              backgroundImage: "url('/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png')"
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
             }}
           >
             <div className="absolute inset-0 bg-black/60 flex items-center">

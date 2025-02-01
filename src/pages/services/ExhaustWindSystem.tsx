@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Award, Leaf, Settings, Wind } from "lucide-react";
+=======
+import { Wind, Settings, Award, Leaf } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const ExhaustWindSystem = () => {
   return (
@@ -47,7 +53,11 @@ const ExhaustWindSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
+<<<<<<< HEAD
                 src="../../public/images/3fbb03a4-1fb8-4ec9-9de1-1f8664f3560a.jpg" 
+=======
+                src="https://images.unsplash.com/photo-1487887235947-a955ef187fcc" 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                 alt="Exhaust Wind System" 
                 className="w-full h-[500px] object-cover"
               />

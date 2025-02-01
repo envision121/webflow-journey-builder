@@ -47,7 +47,11 @@ const Mission = () => {
           <div className="relative order-1 lg:order-2">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
               <img
+<<<<<<< HEAD
                 src="../../public/images/pexels-tomfisk-13932270.jpg"
+=======
+                src="/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png"
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                 alt="Green Energy Solutions"
                 className="w-full h-[400px] lg:h-[600px] object-cover hover:scale-105 transition-transform duration-700"
               />

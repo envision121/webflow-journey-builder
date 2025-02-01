@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Award, Droplet, Settings, Sun } from "lucide-react";
+=======
+import { Sun, Droplet, Settings, Award } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const SolarPumpSystem = () => {
   return (
@@ -47,7 +53,11 @@ const SolarPumpSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
+<<<<<<< HEAD
                 src="../../public/images/solar-pump.jpg" 
+=======
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                 alt="Solar Pump System" 
                 className="w-full h-[500px] object-cover"
               />

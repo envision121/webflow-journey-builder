@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+=======
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 import { CheckCircle } from "lucide-react";
 
 const About = () => {
@@ -20,7 +25,11 @@ const About = () => {
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
+<<<<<<< HEAD
               backgroundImage: "url('../../public/images/020fd4b8-7f04-48dd-bb89-4a01d4e06dde.jpg')"
+=======
+              backgroundImage: "url('/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png')"
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
             }}
           >
             <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
@@ -95,7 +104,11 @@ const About = () => {
             <div className="mt-16">
               <div className="relative rounded-xl overflow-hidden h-[400px]">
                 <img 
+<<<<<<< HEAD
                   src="../../public/images/4a1f7656-c373-4f2a-82df-88003f95a553.jpg"
+=======
+                  src="/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png"
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                   alt="Empee Green Energy Facility" 
                   className="w-full h-full object-cover"
                 />

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Award, Leaf, Settings, Wind } from "lucide-react";
+=======
+import { Leaf, Settings, Award, Wind } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const AeroLeafWindTurbines = () => {
   return (
@@ -46,7 +52,11 @@ const AeroLeafWindTurbines = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
+<<<<<<< HEAD
                 src="../../public/images/ad9ccc0c-264b-44e0-8d46-80f7a282483a.jpg" 
+=======
+                src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                 alt="Aero Leaf Wind Turbine" 
                 className="w-full h-[500px] object-cover"
               />

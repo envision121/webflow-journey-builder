@@ -1,66 +1,117 @@
+<<<<<<< HEAD
 import {
+=======
+import { useEffect, useState } from "react";
+import { 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+<<<<<<< HEAD
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
+=======
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ArrowRight } from "lucide-react";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const Gallery = () => {
   const projects = [
     {
       title: "Wind Farm Installation",
       location: "Tamil Nadu",
+<<<<<<< HEAD
       image: "../../public/images/cf266cb9-9a8a-4bb9-8fc7-9d60bfe982b9.jpg",
+=======
+      image: "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Solar Park Development",
       location: "Karnataka",
+<<<<<<< HEAD
       image: "../../public/images/pexels-tomfisk-1599819.jpg",
+=======
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Hybrid Energy System",
       location: "Kerala",
+<<<<<<< HEAD
       image: "../../public/images/hybrid.jpg",
+=======
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Industrial Solar Installation",
       location: "Andhra Pradesh",
+<<<<<<< HEAD
       image: "../../public/images/f413a6be-6348-4f9a-a590-91f10f0fda90.jpg",
+=======
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Commercial Wind Project",
       location: "Maharashtra",
+<<<<<<< HEAD
       image: "../../public/images/photo-1473341304170-971dccb5ac1e.jpeg",
+=======
+      image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Residential Solar Setup",
       location: "Gujarat",
+<<<<<<< HEAD
       image: "../../public/images/4a1f7656-c373-4f2a-82df-88003f95a553.jpg",
+=======
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Urban Wind Installation",
       location: "Delhi",
+<<<<<<< HEAD
       image: "../../public/images/4598d1ff-9df1-4488-8952-31fee6fc718b.jpg",
+=======
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     },
     {
       title: "Rural Solar Project",
       location: "Rajasthan",
+<<<<<<< HEAD
       image: "../../public/images/b4dcb0ea-21bc-4724-90dd-413bb6480731.png",
+=======
+      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276",
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
     }
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
+<<<<<<< HEAD
     {
+=======
+    { 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
       loop: true,
       align: "start",
       slidesToScroll: 1,
     },
+<<<<<<< HEAD
     [Autoplay({ delay: 3000, stopOnInteraction: false})]
+=======
+    [Autoplay({ delay: 3000, stopOnInteraction: false })]
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
   );
 
   const [selectedIndex, setSelectedIndex] = useState(0);

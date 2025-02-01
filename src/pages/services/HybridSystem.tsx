@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Award, Battery, Sun, Wind } from "lucide-react";
+=======
+import { Sun, Wind, Battery, Award } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
 
 const HybridSystem = () => {
   return (
@@ -47,7 +53,11 @@ const HybridSystem = () => {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img 
+<<<<<<< HEAD
                 src="../../public/images/hybrid.jpg" 
+=======
+                src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
+>>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
                 alt="Hybrid System" 
                 className="w-full h-[500px] object-cover"
               />
