@@ -1,16 +1,29 @@
-<<<<<<< HEAD
-import Footer from "@/components/Footer";
-import Map from "@/components/Map";
-import Navbar from "@/components/Navbar";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
-=======
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Map from "@/components/Map";
 import { Mail, Phone, MapPin } from "lucide-react";
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    I notice there are merge conflict markers (<<<<<<< HEAD, =======, >>>>>>>) in multiple files that need to be resolved. Let's fix these issues step by step.
+
+<lov-code>
+Let's fix each file by removing the merge conflict markers and keeping the correct code:
+
+<lov-write file_path="src/pages/Contact.tsx">
+import { useState } from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Map from "@/components/Map";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,17 +42,10 @@ const Contact = () => {
       <Navbar />
       <main className="flex-grow">
         <div className="h-[70vh] relative w-full">
-<<<<<<< HEAD
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('../../public/images/4a1f7656-c373-4f2a-82df-88003f95a553.jpg')"
-=======
           <div 
             className="absolute inset-0 bg-cover bg-center"
             style={{ 
-              backgroundImage: "url('/lovable-uploads/80995959-140a-47b6-ba6a-1b65f43a5107.png')"
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+              backgroundImage: "url('/images/4a1f7656-c373-4f2a-82df-88003f95a553.jpg')"
             }}
           >
             <div className="absolute inset-0 bg-black/60 flex items-center">

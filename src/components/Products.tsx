@@ -7,38 +7,22 @@ const Products = () => {
     {
       title: "Wind System",
       products: ["UE-6 650 Wind Turbine", "UE-15 1.5KW Wind Turbine", "UE-42 4.2KW Wind Turbine"],
-<<<<<<< HEAD
-      image: "../../public/images/wind.jpg",
-=======
-      image: "/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/wind.jpg",
     },
     {
       title: "Solar System",
       products: ["On-Grid System", "Off Grid System"],
-<<<<<<< HEAD
-      image: "../../public/images/b4dcb0ea-21bc-4724-90dd-413bb6480731.png",
-=======
-      image: "/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/b4dcb0ea-21bc-4724-90dd-413bb6480731.png",
     },
     {
       title: "Hybrid System",
       products: ["Wind & Solar Hybrid System", "Solar Hybrid System"],
-<<<<<<< HEAD
-      image: "../../public/images/hybrid.jpg",
-=======
-      image: "/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/hybrid.jpg",
     },
     {
       title: "Solar Pump System",
       products: ["Deep Well Pumps", "Surface Pumps", "Agricultural Pumps"],
-<<<<<<< HEAD
-      image: "../../public/images/solar-pump.jpg",
-=======
-      image: "/lovable-uploads/01e5bfed-d5d0-4f5c-a129-59581f592e6a.png",
->>>>>>> ccf0d6fd9476206249b45b1ffd9e8f283d240ea1
+      image: "/images/solar-pump.jpg",
     },
   ];
 
